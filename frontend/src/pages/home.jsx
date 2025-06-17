@@ -1,16 +1,21 @@
 import React from 'react';
-import { HiChatAlt } from "react-icons/hi";
-import { HiCog } from "react-icons/hi";
+import { HiChatAlt, HiCog } from "react-icons/hi";
+import Bg01 from '../assets/home/Bg-01.jpg';
 
 function Home() {
   return (
-    <div>
-      <h1 className='text-[30px] text-center font-inter font-bold'>Test React</h1>
-      <p className='text-[16px] text-center font-inter'>This is a simple Home component built using React. <br>
-      </br>You can modify and expand it as needed.</p>
-      <div className='flex flex-row items-center justify-center gap-4 mt-4'>
-        <HiChatAlt className='text-5xl' />    
-        <HiCog className=' text-5xl' />
+    <div className=' flex items-center justify-center relative bg-black'>
+      
+      <div className='w-[402px] bg-white rounded-lg'>
+        <img src={Bg01} />
+
+        <div className='flex flex-col items-center justify-center z-10 bg-white '>
+          <h2 className='text-4xl'>Welcome to</h2>
+            <h1 className='text-7xl font-bold'>UniEats</h1>
+            <p className='text-center font-light mt-4 ml-10 mr-10'>Fuel your goals with personalized meals, real-time calorie tracking,and smart nutrition advice all in one app.</p>
+            <button className='bg-[#3FC660] text-white  rounded-lg mt-6 w-[279px] h-[53px] mb-10'>Get Started</button>
+        </div>
+
       </div>
     </div>
   );
