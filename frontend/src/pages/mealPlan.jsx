@@ -1,7 +1,8 @@
 import React from "react";
 import CategoryItem from "../components/catagorieItem";
-import MealCart from "../components/mealCart"
+import MainMealsCart from "../components/mainMealsCart.jsx"
 import Footer from "../components/footer"
+import MainMeals from '../data/mainMeals.js'
 
 function MealPlan() {
     return (
@@ -25,13 +26,9 @@ function MealPlan() {
                         <h3 className="text-[#3FC660] pr-3">view all</h3>
                     </div>
                     <div className="flex gap-3 overflow-x-auto space-x-4 p-2">
-                        <MealCart Bportions="200" Bprice="100" />
-                        <MealCart />
-                        <MealCart />
-                        <MealCart />
-                        <MealCart />
-
-
+                        {MainMeals.map(meal => (
+                            <MainMealsCart key={meal.id} meal={meal} />
+                        ))}
                     </div>
                     <Footer />
                     
