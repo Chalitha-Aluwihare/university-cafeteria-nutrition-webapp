@@ -4,43 +4,52 @@ import MainMeals from '../data/mainMeals.js'
 import BreakfastMealCart from "../components/breakfastMealCart.jsx";
 import BreakfasrMeal from '../data/BreakfastMeal.js'
 import Footer from "../components/footer"
+import { IoChevronBackOutline } from "react-icons/io5";
+import { MdOutlineFavorite } from "react-icons/md";
+
 
 function MealPlanCustomize() {
-    const meal = MainMeals[2]
+    const meal = MainMeals[0]
     return (
         <>
             <div className=' flex items-center justify-center relative bg-black'>
                 <div className='w-[402px] bg-white'>
+                    <div className="flex justify-between px-3 pt-3">
+                        <button className="mb-2 w-[40px] bg-[#D9D9D9] h-[40px] rounded-[10px] items-center flex justify-center"><IoChevronBackOutline /></button>
+                        <button className="mb-2 w-[40px] bg-[#3FC660] h-[40px] rounded-[10px] items-center flex justify-center"><MdOutlineFavorite /></button>
+                    </div>
 
-                    <h1 className="text-2xl font-extrabold pl-3">{meal.name}</h1>
-                    <div className="flex items-center  pl-3">
-                        <h3 className="text-[#3FC660]">Rs.</h3>
-                        <h2 className="text-[#3FC660] text-2xl">{meal.portions.small.price}</h2>
-                        <h3 className="text-[#3FC660]">.00</h3>
+                    <div>
+                        <h1 className="text-2xl font-extrabold pl-3">{meal.name}</h1>
+                    </div>
+                    <div className="flex items-center  pl-3 font-bold ">
+                        <h3 className="text-[#3FC660] text-2xl">Rs.</h3>
+                        <h2 className="text-[#3FC660] text-3xl">{meal.portions.small.price}</h2>
+                        <h3 className="text-[#3FC660] text-2xl">.00</h3>
                     </div>
                     <div className="flex items-center justify-between">
 
                         <div className="pl-3">
                             <div >
-                                <h3>Size</h3>
+                                <h3 className="font-semibold">Size</h3>
                                 <div className="flex gap-2">
-                                    <button className="bg-[#3FC660] w-[30px] h-[30px]  rounded-[6px] text-[14px]">S</button>
-                                    <button className="bg-[#3FC660] w-[30px] h-[30px]  rounded-[6px] text-[14px]">M</button>
+                                    <button className="bg-[#3FC660] w-[30px] h-[30px]  rounded-[7px] text-[14px]">S</button>
+                                    <button className="bg-[#3FC660] w-[30px] h-[30px]  rounded-[7px] text-[14px]">M</button>
                                 </div>
 
                             </div>
                             <div className="mt-2" >
 
-                                <h3>Quantity</h3>
+                                <h3 className="font-semibold">Quantity</h3>
                                 <div className="flex gap-2 items-center">
-                                    <button className="bg-[#3FC660] w-[30px] h-[30px]  rounded-[6px] text-[14px]">-</button>
+                                    <button className="bg-[#3FC660] w-[30px] h-[30px]  rounded-[7px] text-[14px]">-</button>
                                     <h4>3</h4>
-                                    <button className="bg-[#3FC660] w-[30px] h-[30px]  rounded-[6px] text-[14px]">+</button>
+                                    <button className="bg-[#3FC660] w-[30px] h-[30px]  rounded-[7px] text-[14px]">+</button>
                                 </div>
                             </div>
                             <div className="mt-2" >
 
-                                <h3>Total Nutrions</h3>
+                                <h3 className="font-semibold">Total Nutrions</h3>
                                 <div className="flex gap-1">
                                     <div className=" items-center font-light text-[14px]">
                                         <h4>Portionsg</h4>
