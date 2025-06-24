@@ -31,7 +31,7 @@ function App() {
         <Route path="/mealPlanCustomize" element={<MealPlanCustomize />}/>
         <Route Path="/signinUserDetails" element={<SigninUserDetails />}/>
         <Route path="/nutritionalHistory" element={<NutritionalHistory />}/>
-        <Route path="/orderFood" elememt={<OrderFood />}/>
+        <Route path="/orderFood" element={<OrderFood />}/>
       </Routes>
     </Router>
   );
