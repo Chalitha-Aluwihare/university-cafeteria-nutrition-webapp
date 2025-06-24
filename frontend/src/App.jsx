@@ -30,8 +30,8 @@ function App() {
         <Route path="/mealPlan"element={<MealPlan />}/>
         <Route path="/mealPlanCustomize" element={<MealPlanCustomize />}/>
         <Route Path="/signinUserDetails" element={<SigninUserDetails />}/>
-        <Route path="/pages/nutritionalHistory" element={<NutritionalHistory />}/>
-        <Route path="/pages/orderFood" elememt={<OrderFood />}/>
+        <Route path="/nutritionalHistory" element={<NutritionalHistory />}/>
+        <Route path="/orderFood" elememt={<OrderFood />}/>
       </Routes>
     </Router>
   );

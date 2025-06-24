@@ -9,7 +9,7 @@ import { MdOutlineFavorite } from "react-icons/md";
 
 
 function MealPlanCustomize() {
-    const meal = MainMeals[0]
+    const meal = MainMeals[1]
     return (
         <>
             <div className=' flex items-center justify-center relative bg-black'>
