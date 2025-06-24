@@ -1,500 +1,582 @@
 const nutritionHistory = [
   {
     userId: "U001",
-    date: "2025-06-01",           // Sunday, June 1, 2025
-    day: "Sunday",
-    month: "June",
+    date: "2025-01-01",
     year: 2025,
-    totalCalories: 2104,
-    totalCarbs: 346,
-    totalProtein: 149,
-    totalFat: 49
-  },
-  {
-    userId: "U001",
-    date: "2025-06-02",           // Monday, June 2, 2025
-    day: "Monday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1645,
-    totalCarbs: 306,
-    totalProtein: 70,
-    totalFat: 88
-  },
-  {
-    userId: "U001",
-    date: "2025-06-03",           // Tuesday, June 3, 2025
-    day: "Tuesday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2307,
-    totalCarbs: 153,
-    totalProtein: 143,
-    totalFat: 44
-  },
-  {
-    userId: "U001",
-    date: "2025-06-04",           // Wednesday, June 4, 2025
+    month: "January",
     day: "Wednesday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2398,
-    totalCarbs: 225,
-    totalProtein: 120,
-    totalFat: 51
+    dayNo: 1,
+    index: "01",
+    meals: {
+      breakfast: { calories: 320, carbs: 45, protein: 15, fat: 10 },
+      lunch: { calories: 550, carbs: 70, protein: 25, fat: 20 },
+      dinner: { calories: 480, carbs: 65, protein: 20, fat: 15 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-05",           // Thursday, June 5, 2025
+    date: "2025-01-02",
+    year: 2025,
+    month: "January",
     day: "Thursday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1749,
-    totalCarbs: 310,
-    totalProtein: 90,
-    totalFat: 55
+    dayNo: 2,
+    index: "02",
+    meals: {
+      breakfast: { calories: 300, carbs: 40, protein: 12, fat: 8 },
+      lunch: { calories: 600, carbs: 80, protein: 30, fat: 25 },
+      dinner: { calories: 500, carbs: 60, protein: 22, fat: 18 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-06",           // Friday, June 6, 2025
+    date: "2025-01-03",
+    year: 2025,
+    month: "January",
     day: "Friday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2194,
-    totalCarbs: 275,
-    totalProtein: 142,
-    totalFat: 45
+    dayNo: 3,
+    index: "03",
+    meals: {
+      breakfast: { calories: 350, carbs: 48, protein: 18, fat: 9 },
+      lunch: { calories: 580, carbs: 75, protein: 28, fat: 22 },
+      dinner: { calories: 520, carbs: 68, protein: 24, fat: 17 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-07",           // Saturday, June 7, 2025
+    date: "2025-01-04",
+    year: 2025,
+    month: "January",
     day: "Saturday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1987,
-    totalCarbs: 260,
-    totalProtein: 110,
-    totalFat: 50
+    dayNo: 4,
+    index: "04",
+    meals: {
+      breakfast: { calories: 310, carbs: 42, protein: 14, fat: 10 },
+      lunch: { calories: 590, carbs: 78, protein: 27, fat: 21 },
+      dinner: { calories: 510, carbs: 66, protein: 23, fat: 16 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-08",           // Sunday, June 8, 2025
+    date: "2025-01-05",
+    year: 2025,
+    month: "January",
     day: "Sunday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1825,
-    totalCarbs: 240,
-    totalProtein: 95,
-    totalFat: 63
+    dayNo: 5,
+    index: "05",
+    meals: {
+      breakfast: { calories: 330, carbs: 44, protein: 16, fat: 9 },
+      lunch: { calories: 620, carbs: 85, protein: 31, fat: 24 },
+      dinner: { calories: 495, carbs: 63, protein: 21, fat: 14 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-09",           // Monday, June 9, 2025
+    date: "2025-01-06",
+    year: 2025,
+    month: "January",
     day: "Monday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2099,
-    totalCarbs: 300,
-    totalProtein: 130,
-    totalFat: 40
+    dayNo: 6,
+    index: "06",
+    meals: {
+      breakfast: { calories: 340, carbs: 46, protein: 17, fat: 11 },
+      lunch: { calories: 610, carbs: 82, protein: 29, fat: 23 },
+      dinner: { calories: 505, carbs: 67, protein: 22, fat: 15 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-10",           // Tuesday, June 10, 2025
+    date: "2025-01-07",
+    year: 2025,
+    month: "January",
     day: "Tuesday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1654,
-    totalCarbs: 270,
-    totalProtein: 85,
-    totalFat: 65
+    dayNo: 7,
+    index: "07",
+    meals: {
+      breakfast: { calories: 315, carbs: 41, protein: 13, fat: 9 },
+      lunch: { calories: 580, carbs: 76, protein: 26, fat: 20 },
+      dinner: { calories: 490, carbs: 64, protein: 20, fat: 14 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-11",           // Wednesday, June 11, 2025
+    date: "2025-01-08",
+    year: 2025,
+    month: "January",
     day: "Wednesday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2200,
-    totalCarbs: 230,
-    totalProtein: 140,
-    totalFat: 50
+    dayNo: 8,
+    index: "08",
+    meals: {
+      breakfast: { calories: 325, carbs: 43, protein: 15, fat: 10 },
+      lunch: { calories: 590, carbs: 78, protein: 28, fat: 22 },
+      dinner: { calories: 510, carbs: 65, protein: 23, fat: 16 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-12",           // Thursday, June 12, 2025
+    date: "2025-01-09",
+    year: 2025,
+    month: "January",
     day: "Thursday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2375,
-    totalCarbs: 280,
-    totalProtein: 155,
-    totalFat: 48
+    dayNo: 9,
+    index: "09",
+    meals: {
+      breakfast: { calories: 335, carbs: 47, protein: 16, fat: 10 },
+      lunch: { calories: 570, carbs: 74, protein: 27, fat: 21 },
+      dinner: { calories: 525, carbs: 69, protein: 24, fat: 17 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-13",           // Friday, June 13, 2025
+    date: "2025-01-10",
+    year: 2025,
+    month: "January",
     day: "Friday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1934,
-    totalCarbs: 260,
-    totalProtein: 120,
-    totalFat: 53
+    dayNo: 10,
+    index: "10",
+    meals: {
+      breakfast: { calories: 345, carbs: 49, protein: 18, fat: 11 },
+      lunch: { calories: 605, carbs: 81, protein: 29, fat: 23 },
+      dinner: { calories: 515, carbs: 67, protein: 23, fat: 16 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-14",           // Saturday, June 14, 2025
+    date: "2025-01-11",
+    year: 2025,
+    month: "January",
     day: "Saturday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1781,
-    totalCarbs: 320,
-    totalProtein: 100,
-    totalFat: 60
+    dayNo: 11,
+    index: "11",
+    meals: {
+      breakfast: { calories: 305, carbs: 42, protein: 14, fat: 9 },
+      lunch: { calories: 585, carbs: 77, protein: 27, fat: 21 },
+      dinner: { calories: 495, carbs: 64, protein: 21, fat: 15 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-15",           // Sunday, June 15, 2025
+    date: "2025-01-12",
+    year: 2025,
+    month: "January",
     day: "Sunday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2100,
-    totalCarbs: 250,
-    totalProtein: 130,
-    totalFat: 55
+    dayNo: 12,
+    index: "12",
+    meals: {
+      breakfast: { calories: 355, carbs: 50, protein: 19, fat: 12 },
+      lunch: { calories: 615, carbs: 83, protein: 30, fat: 24 },
+      dinner: { calories: 530, carbs: 70, protein: 25, fat: 18 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-16",           // Monday, June 16, 2025
+    date: "2025-01-13",
+    year: 2025,
+    month: "January",
     day: "Monday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2250,
-    totalCarbs: 270,
-    totalProtein: 145,
-    totalFat: 48
+    dayNo: 13,
+    index: "13",
+    meals: {
+      breakfast: { calories: 365, carbs: 52, protein: 20, fat: 13 },
+      lunch: { calories: 595, carbs: 79, protein: 28, fat: 22 },
+      dinner: { calories: 540, carbs: 72, protein: 26, fat: 19 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-17",           // Tuesday, June 17, 2025
+    date: "2025-01-14",
+    year: 2025,
+    month: "January",
     day: "Tuesday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1950,
-    totalCarbs: 240,
-    totalProtein: 115,
-    totalFat: 52
+    dayNo: 14,
+    index: "14",
+    meals: {
+      breakfast: { calories: 375, carbs: 54, protein: 21, fat: 14 },
+      lunch: { calories: 625, carbs: 85, protein: 32, fat: 25 },
+      dinner: { calories: 550, carbs: 74, protein: 27, fat: 20 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-18",           // Wednesday, June 18, 2025
+    date: "2025-01-15",
+    year: 2025,
+    month: "January",
     day: "Wednesday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1855,
-    totalCarbs: 220,
-    totalProtein: 110,
-    totalFat: 58
+    dayNo: 15,
+    index: "15",
+    meals: {
+      breakfast: { calories: 385, carbs: 56, protein: 22, fat: 15 },
+      lunch: { calories: 635, carbs: 87, protein: 33, fat: 26 },
+      dinner: { calories: 560, carbs: 76, protein: 28, fat: 21 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-19",           // Thursday, June 19, 2025
+    date: "2025-01-16",
+    year: 2025,
+    month: "January",
     day: "Thursday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2155,
-    totalCarbs: 310,
-    totalProtein: 140,
-    totalFat: 44
+    dayNo: 16,
+    index: "16",
+    meals: {
+      breakfast: { calories: 395, carbs: 58, protein: 23, fat: 16 },
+      lunch: { calories: 645, carbs: 89, protein: 34, fat: 27 },
+      dinner: { calories: 570, carbs: 78, protein: 29, fat: 22 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-20",           // Friday, June 20, 2025
+    date: "2025-01-17",
+    year: 2025,
+    month: "January",
     day: "Friday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2300,
-    totalCarbs: 270,
-    totalProtein: 150,
-    totalFat: 41
+    dayNo: 17,
+    index: "17",
+    meals: {
+      breakfast: { calories: 405, carbs: 60, protein: 24, fat: 17 },
+      lunch: { calories: 655, carbs: 91, protein: 35, fat: 28 },
+      dinner: { calories: 580, carbs: 80, protein: 30, fat: 23 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-21",           // Saturday, June 21, 2025
+    date: "2025-01-18",
+    year: 2025,
+    month: "January",
     day: "Saturday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1809,
-    totalCarbs: 230,
-    totalProtein: 125,
-    totalFat: 55
+    dayNo: 18,
+    index: "18",
+    meals: {
+      breakfast: { calories: 415, carbs: 62, protein: 25, fat: 18 },
+      lunch: { calories: 665, carbs: 93, protein: 36, fat: 29 },
+      dinner: { calories: 590, carbs: 82, protein: 31, fat: 24 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-22",           // Sunday, June 22, 2025
+    date: "2025-01-19",
+    year: 2025,
+    month: "January",
     day: "Sunday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2000,
-    totalCarbs: 280,
-    totalProtein: 132,
-    totalFat: 48
+    dayNo: 19,
+    index: "19",
+    meals: {
+      breakfast: { calories: 425, carbs: 64, protein: 26, fat: 19 },
+      lunch: { calories: 675, carbs: 95, protein: 37, fat: 30 },
+      dinner: { calories: 600, carbs: 84, protein: 32, fat: 25 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-23",           // Monday, June 23, 2025
+    date: "2025-01-20",
+    year: 2025,
+    month: "January",
     day: "Monday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2240,
-    totalCarbs: 290,
-    totalProtein: 140,
-    totalFat: 42
+    dayNo: 20,
+    index: "20",
+    meals: {
+      breakfast: { calories: 435, carbs: 66, protein: 27, fat: 20 },
+      lunch: { calories: 685, carbs: 97, protein: 38, fat: 31 },
+      dinner: { calories: 610, carbs: 86, protein: 33, fat: 26 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-24",           // Tuesday, June 24, 2025
+    date: "2025-01-21",
+    year: 2025,
+    month: "January",
     day: "Tuesday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1975,
-    totalCarbs: 245,
-    totalProtein: 120,
-    totalFat: 50
+    dayNo: 21,
+    index: "21",
+    meals: {
+      breakfast: { calories: 445, carbs: 68, protein: 28, fat: 21 },
+      lunch: { calories: 695, carbs: 99, protein: 39, fat: 32 },
+      dinner: { calories: 620, carbs: 88, protein: 34, fat: 27 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-25",           // Wednesday, June 25, 2025
+    date: "2025-01-22",
+    year: 2025,
+    month: "January",
     day: "Wednesday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1890,
-    totalCarbs: 220,
-    totalProtein: 105,
-    totalFat: 60
+    dayNo: 22,
+    index: "22",
+    meals: {
+      breakfast: { calories: 455, carbs: 70, protein: 29, fat: 22 },
+      lunch: { calories: 705, carbs: 101, protein: 40, fat: 33 },
+      dinner: { calories: 630, carbs: 90, protein: 35, fat: 28 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-26",           // Thursday, June 26, 2025
+    date: "2025-01-23",
+    year: 2025,
+    month: "January",
     day: "Thursday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2105,
-    totalCarbs: 300,
-    totalProtein: 138,
-    totalFat: 45
+    dayNo: 23,
+    index: "23",
+    meals: {
+      breakfast: { calories: 465, carbs: 72, protein: 30, fat: 23 },
+      lunch: { calories: 715, carbs: 103, protein: 41, fat: 34 },
+      dinner: { calories: 640, carbs: 92, protein: 36, fat: 29 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-27",           // Friday, June 27, 2025
+    date: "2025-01-24",
+    year: 2025,
+    month: "January",
     day: "Friday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2255,
-    totalCarbs: 275,
-    totalProtein: 150,
-    totalFat: 43
+    dayNo: 24,
+    index: "24",
+    meals: {
+      breakfast: { calories: 475, carbs: 74, protein: 31, fat: 24 },
+      lunch: { calories: 725, carbs: 105, protein: 42, fat: 35 },
+      dinner: { calories: 650, carbs: 94, protein: 37, fat: 30 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-28",           // Saturday, June 28, 2025
+    date: "2025-01-25",
+    year: 2025,
+    month: "January",
     day: "Saturday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1750,
-    totalCarbs: 225,
-    totalProtein: 110,
-    totalFat: 55
+    dayNo: 25,
+    index: "25",
+    meals: {
+      breakfast: { calories: 485, carbs: 76, protein: 32, fat: 25 },
+      lunch: { calories: 735, carbs: 107, protein: 43, fat: 36 },
+      dinner: { calories: 660, carbs: 96, protein: 38, fat: 31 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-29",           // Sunday, June 29, 2025
+    date: "2025-01-26",
+    year: 2025,
+    month: "January",
     day: "Sunday",
-    month: "June",
-    year: 2025,
-    totalCalories: 1980,
-    totalCarbs: 280,
-    totalProtein: 125,
-    totalFat: 50
+    dayNo: 26,
+    index: "26",
+    meals: {
+      breakfast: { calories: 495, carbs: 78, protein: 33, fat: 26 },
+      lunch: { calories: 745, carbs: 109, protein: 44, fat: 37 },
+      dinner: { calories: 670, carbs: 98, protein: 39, fat: 32 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-06-30",           // Monday, June 30, 2025
+    date: "2025-01-27",
+    year: 2025,
+    month: "January",
     day: "Monday",
-    month: "June",
-    year: 2025,
-    totalCalories: 2150,
-    totalCarbs: 310,
-    totalProtein: 145,
-    totalFat: 42
+    dayNo: 27,
+    index: "27",
+    meals: {
+      breakfast: { calories: 505, carbs: 80, protein: 34, fat: 27 },
+      lunch: { calories: 755, carbs: 111, protein: 45, fat: 38 },
+      dinner: { calories: 680, carbs: 100, protein: 40, fat: 33 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-07-01",           // Tuesday, July 1, 2025
+    date: "2025-01-28",
+    year: 2025,
+    month: "January",
     day: "Tuesday",
-    month: "July",
-    year: 2025,
-    totalCalories: 1905,
-    totalCarbs: 260,
-    totalProtein: 115,
-    totalFat: 52
+    dayNo: 28,
+    index: "28",
+    meals: {
+      breakfast: { calories: 515, carbs: 82, protein: 35, fat: 28 },
+      lunch: { calories: 765, carbs: 113, protein: 46, fat: 39 },
+      dinner: { calories: 690, carbs: 102, protein: 41, fat: 34 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-07-02",           // Wednesday, July 2, 2025
+    date: "2025-01-29",
+    year: 2025,
+    month: "January",
     day: "Wednesday",
-    month: "July",
-    year: 2025,
-    totalCalories: 1840,
-    totalCarbs: 225,
-    totalProtein: 110,
-    totalFat: 58
+    dayNo: 29,
+    index: "29",
+    meals: {
+      breakfast: { calories: 525, carbs: 84, protein: 36, fat: 29 },
+      lunch: { calories: 775, carbs: 115, protein: 47, fat: 40 },
+      dinner: { calories: 700, carbs: 104, protein: 42, fat: 35 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-07-03",           // Thursday, July 3, 2025
+    date: "2025-01-30",
+    year: 2025,
+    month: "January",
     day: "Thursday",
-    month: "July",
-    year: 2025,
-    totalCalories: 2120,
-    totalCarbs: 295,
-    totalProtein: 140,
-    totalFat: 44
+    dayNo: 30,
+    index: "30",
+    meals: {
+      breakfast: { calories: 535, carbs: 86, protein: 37, fat: 30 },
+      lunch: { calories: 785, carbs: 117, protein: 48, fat: 41 },
+      dinner: { calories: 710, carbs: 106, protein: 43, fat: 36 }
+    },
   },
+    
+  // February 2025 Data
   {
     userId: "U001",
-    date: "2025-07-04",           // Friday, July 4, 2025
-    day: "Friday",
-    month: "July",
+    date: "2025-02-01",
     year: 2025,
-    totalCalories: 2290,
-    totalCarbs: 275,
-    totalProtein: 155,
-    totalFat: 41
-  },
-  {
-    userId: "U001",
-    date: "2025-07-05",           // Saturday, July 5, 2025
+    month: "February",
     day: "Saturday",
-    month: "July",
-    year: 2025,
-    totalCalories: 1770,
-    totalCarbs: 230,
-    totalProtein: 120,
-    totalFat: 53
+    dayNo: 1,
+    index: "31",
+    meals: {
+      breakfast: { calories: 520, carbs: 82, protein: 36, fat: 29 },
+      lunch: { calories: 770, carbs: 115, protein: 47, fat: 40 },
+      dinner: { calories: 700, carbs: 104, protein: 42, fat: 35 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-07-06",           // Sunday, July 6, 2025
+    date: "2025-02-02",
+    year: 2025,
+    month: "February",
     day: "Sunday",
-    month: "July",
-    year: 2025,
-    totalCalories: 2030,
-    totalCarbs: 290,
-    totalProtein: 130,
-    totalFat: 49
+    dayNo: 2,
+    index: "32",
+    meals: {
+      breakfast: { calories: 530, carbs: 85, protein: 37, fat: 30 },
+      lunch: { calories: 780, carbs: 116, protein: 48, fat: 41 },
+      dinner: { calories: 705, carbs: 105, protein: 43, fat: 36 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-07-07",           // Monday, July 7, 2025
+    date: "2025-02-03",
+    year: 2025,
+    month: "February",
     day: "Monday",
-    month: "July",
-    year: 2025,
-    totalCalories: 2235,
-    totalCarbs: 300,
-    totalProtein: 145,
-    totalFat: 43
+    dayNo: 3,
+    index: "33",
+    meals: {
+      breakfast: { calories: 540, carbs: 87, protein: 38, fat: 31 },
+      lunch: { calories: 790, carbs: 118, protein: 49, fat: 42 },
+      dinner: { calories: 715, carbs: 107, protein: 44, fat: 37 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-07-08",           // Tuesday, July 8, 2025
+    date: "2025-02-04",
+    year: 2025,
+    month: "February",
     day: "Tuesday",
-    month: "July",
-    year: 2025,
-    totalCalories: 1925,
-    totalCarbs: 240,
-    totalProtein: 115,
-    totalFat: 50
+    dayNo: 4,
+    index: "34",
+    meals: {
+      breakfast: { calories: 525, carbs: 83, protein: 36, fat: 30 },
+      lunch: { calories: 775, carbs: 115, protein: 48, fat: 41 },
+      dinner: { calories: 710, carbs: 106, protein: 43, fat: 36 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-07-09",           // Wednesday, July 9, 2025
+    date: "2025-02-05",
+    year: 2025,
+    month: "February",
     day: "Wednesday",
-    month: "July",
-    year: 2025,
-    totalCalories: 1860,
-    totalCarbs: 210,
-    totalProtein: 105,
-    totalFat: 59
+    dayNo: 5,
+    index: "35",
+    meals: {
+      breakfast: { calories: 535, carbs: 86, protein: 37, fat: 31 },
+      lunch: { calories: 785, carbs: 117, protein: 49, fat: 42 },
+      dinner: { calories: 720, carbs: 108, protein: 44, fat: 37 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-07-10",           // Thursday, July 10, 2025
+    date: "2025-02-06",
+    year: 2025,
+    month: "February",
     day: "Thursday",
-    month: "July",
-    year: 2025,
-    totalCalories: 2115,
-    totalCarbs: 305,
-    totalProtein: 142,
-    totalFat: 45
+    dayNo: 6,
+    index: "36",
+    meals: {
+      breakfast: { calories: 545, carbs: 88, protein: 38, fat: 32 },
+      lunch: { calories: 795, carbs: 119, protein: 50, fat: 43 },
+      dinner: { calories: 725, carbs: 109, protein: 45, fat: 38 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-07-11",           // Friday, July 11, 2025
+    date: "2025-02-07",
+    year: 2025,
+    month: "February",
     day: "Friday",
-    month: "July",
-    year: 2025,
-    totalCalories: 2265,
-    totalCarbs: 280,
-    totalProtein: 150,
-    totalFat: 42
+    dayNo: 7,
+    index: "37",
+    meals: {
+      breakfast: { calories: 550, carbs: 89, protein: 39, fat: 33 },
+      lunch: { calories: 800, carbs: 120, protein: 51, fat: 44 },
+      dinner: { calories: 730, carbs: 110, protein: 46, fat: 39 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-07-12",           // Saturday, July 12, 2025
+    date: "2025-02-08",
+    year: 2025,
+    month: "February",
     day: "Saturday",
-    month: "July",
-    year: 2025,
-    totalCalories: 1745,
-    totalCarbs: 225,
-    totalProtein: 110,
-    totalFat: 54
+    dayNo: 8,
+    index: "38",
+    meals: {
+      breakfast: { calories: 535, carbs: 86, protein: 37, fat: 32 },
+      lunch: { calories: 790, carbs: 118, protein: 50, fat: 43 },
+      dinner: { calories: 720, carbs: 108, protein: 45, fat: 38 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-07-13",           // Sunday, July 13, 2025
+    date: "2025-02-09",
+    year: 2025,
+    month: "February",
     day: "Sunday",
-    month: "July",
-    year: 2025,
-    totalCalories: 1995,
-    totalCarbs: 285,
-    totalProtein: 130,
-    totalFat: 51
+    dayNo: 9,
+    index: "39",
+    meals: {
+      breakfast: { calories: 525, carbs: 85, protein: 36, fat: 31 },
+      lunch: { calories: 780, carbs: 116, protein: 49, fat: 42 },
+      dinner: { calories: 710, carbs: 106, protein: 44, fat: 37 }
+    }
   },
   {
     userId: "U001",
-    date: "2025-07-14",           // Monday, July 14, 2025
+    date: "2025-02-10",
+    year: 2025,
+    month: "February",
     day: "Monday",
-    month: "July",
-    year: 2025,
-    totalCalories: 2140,
-    totalCarbs: 295,
-    totalProtein: 145,
-    totalFat: 43
+    dayNo: 10,
+    index: "40",
+    meals: {
+      breakfast: { calories: 515, carbs: 83, protein: 35, fat: 30 },
+      lunch: { calories: 770, carbs: 115, protein: 48, fat: 41 },
+      dinner: { calories: 700, carbs: 105, protein: 43, fat: 36 }
+    }
   },
+  // Additional February days would continue here...
   {
     userId: "U001",
-    date: "2025-07-15",           // Tuesday, July 15, 2025
-    day: "Tuesday",
-    month: "July",
+    date: "2025-02-28",
     year: 2025,
-    totalCalories: 1880,
-    totalCarbs: 250,
-    totalProtein: 115,
-    totalFat: 49
+    month: "February",
+    day: "Friday",
+    dayNo: 28,
+    index: "58",
+    meals: {
+      breakfast: { calories: 530, carbs: 85, protein: 37, fat: 31 },
+      lunch: { calories: 780, carbs: 117, protein: 49, fat: 42 },
+      dinner: { calories: 710, carbs: 106, protein: 44, fat: 37 }
+    }
   }
 ];
 
-export { nutritionHistory };
+export default nutritionHistory;
 
