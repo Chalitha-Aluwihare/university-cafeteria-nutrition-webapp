@@ -4,8 +4,9 @@ import { FaFacebook } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io5";
 import { FaTwitter } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
-
-
+import { FaFacebook } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 
 
 function Footer() {
@@ -70,6 +71,7 @@ function Footer() {
                     </div>
                 </div>
 
+
                 
                 <div className='pr-90'>
                     <h1 className='text-[20px] font-light text-[#4CCF7E] pt-2'>Powered By</h1>
@@ -79,6 +81,7 @@ function Footer() {
                         <h3 className='text-[13px] text-[#C9C9C9]'>Information and Communication Technology</h3>
                     </div>
                 </div>
+
 
             </div>
         </>
