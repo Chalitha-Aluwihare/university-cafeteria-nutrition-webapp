@@ -5,7 +5,7 @@ import LogoImg from '../assets/home/BG-UniEats.png'
 function NavBar() {
     return (
         <>
-            <div className='flex items-center justify-between bg-white p-3'>
+            <div className='flex items-center justify-between bg-white p-3 fixed w-full'>
                 <div>
                     <img src={LogoImg} alt="UniEats Logo" className='w-32' />
                 </div>
