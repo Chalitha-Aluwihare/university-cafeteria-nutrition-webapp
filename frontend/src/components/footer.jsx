@@ -1,12 +1,9 @@
 import React from 'react';
 import LogoImg from '../assets/home/BG-UniEats-W.png'
-import { FaFacebook } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io5";
 import { FaTwitter } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
 
 
 function Footer() {
@@ -70,7 +67,6 @@ function Footer() {
 
                     </div>
                 </div>
-
 
                 
                 <div className='pr-90'>
