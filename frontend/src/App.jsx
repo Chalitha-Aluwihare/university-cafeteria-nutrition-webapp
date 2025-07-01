@@ -29,7 +29,7 @@ function App() {
         <Route path="/signinEmailConfirmed" element={<SigninEmailConfirmed />} />
         <Route path="/mealPlan"element={<MealPlan />}/>
         <Route path="/mealPlanCustomize" element={<MealPlanCustomize />}/>
-        <Route Path="/signinUserDetails" element={<SigninUserDetails />}/>
+        <Route path="/signinUserDetails" element={<SigninUserDetails />}/>
         <Route path="/nutritionalHistory" element={<NutritionalHistory />}/>
         <Route path="/orderFood" element={<OrderFood />}/>
       </Routes>
