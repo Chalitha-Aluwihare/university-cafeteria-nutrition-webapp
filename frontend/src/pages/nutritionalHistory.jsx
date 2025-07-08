@@ -4,6 +4,7 @@ import { IoChevronBackOutline } from "react-icons/io5";
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 import Footer from "../components/footer";
 import { useMemo } from "react";
+import NavBar from "../components/navBar";
 
 function NutritionalHistory() {
 
@@ -81,8 +82,10 @@ function NutritionalHistory() {
 
     return (
         <>
-            <div className=' flex items-center justify-center relative bg-black'>
-                <div className='w-[402px] bg-white'>
+            <div className=''>
+                <NavBar onLoginClick={() => {}} />
+
+                <div className='px-30 pt-20'>
                     <div className="pl-3">
                         <h1 className="font-bold text-3xl">Nutritional History</h1>
                         <h1 className="font-semibold text-2xl text-[#D9D9D9]">Choose Timeframe</h1>
@@ -235,9 +238,10 @@ function NutritionalHistory() {
                         </div>
                     </div>
                     <div className="mt-5">
-                        <Footer />
+                        
                     </div>
                 </div>
+                <Footer />
 
 
             </div>

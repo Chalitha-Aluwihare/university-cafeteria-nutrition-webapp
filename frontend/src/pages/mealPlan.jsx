@@ -3,12 +3,18 @@ import CategoryItem from "../components/catagorieItem";
 import MainMealsCart from "../components/mainMealsCart.jsx"
 import Footer from "../components/footer"
 import MainMeals from '../data/mainMeals.js'
+import NavBar from "../components/navBar.jsx";
 
 function MealPlan() {
     return (
         <>
-            <div className=' flex items-center justify-center relative bg-black'>
-                <div className='w-[402px] bg-white'>
+            <div className=''>
+
+
+                <NavBar onLoginClick={() => {}} />
+
+
+                <div className='w-full bg-white px-30 pt-20'>
 
                     <h2 className="text-2xl text-[#AEAEAE] pl-3">Whst You Eat</h2>
                     <h1 className="text-4xl font-extrabold pl-3">Customize</h1>
@@ -19,7 +25,7 @@ function MealPlan() {
                     </div>
                     <div>
                         <CategoryItem />
-                        
+
                     </div>
                     <div className="flex justify-between mt-5">
                         <h3 className=" text-2xl pl-3">Popular Now</h3>
@@ -30,10 +36,11 @@ function MealPlan() {
                             <MainMealsCart key={meal.id} meal={meal} />
                         ))}
                     </div>
-                    <Footer />
                     
 
+
                 </div>
+                <Footer />
             </div>
         </>
     )

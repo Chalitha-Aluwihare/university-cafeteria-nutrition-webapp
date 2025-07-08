@@ -7,7 +7,7 @@ function MealCart({ meal }) {
             <div className='bg-[#F8F6F7] flex-shrink-0 w-[184px] h-[410px] overflow-x-auto flex flex-col items-center justify-center text-center rounded-[21px]'>
 
                 <div>
-                    <img src={meal.img.url} alt="" className='w-[148px]' />
+                    <img src={meal.img} alt="" className='w-[148px]' />
                     <h3 className='font-bold text-xl'>{meal.name}</h3>
                 </div>
                 <div className='flex gap-1 items-center justify-center'>

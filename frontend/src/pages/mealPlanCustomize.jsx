@@ -6,23 +6,26 @@ import BreakfasrMeal from '../data/BreakfastMeal.js'
 import Footer from "../components/footer"
 import { IoChevronBackOutline } from "react-icons/io5";
 import { MdOutlineFavorite } from "react-icons/md";
+import NavBar from "../components/navBar.jsx";
 
 
 function MealPlanCustomize() {
     const meal = MainMeals[1]
     return (
         <>
-            <div className=' flex items-center justify-center relative bg-black'>
-                <div className='w-[402px] bg-white'>
+            <div className=''>
+                <NavBar onLoginClick={() => {}} />
+
+                <div className='px-30 pt-20'>
                     <div className="flex justify-between px-3 pt-3">
-                        <button className="mb-2 w-[40px] bg-[#D9D9D9] h-[40px] rounded-[10px] items-center flex justify-center"><IoChevronBackOutline /></button>
-                        <button className="mb-2 w-[40px] bg-[#3FC660] h-[40px] rounded-[10px] items-center flex justify-center"><MdOutlineFavorite /></button>
+                        <button className="mb-2 w-[40px] bg-[#D9D9D9] h-[40px] rounded-full items-center flex justify-center"><IoChevronBackOutline /></button>
+                        <button className="mb-2 w-[40px] bg-[#3FC660] h-[40px] rounded-full items-center flex justify-center"><MdOutlineFavorite /></button>
                     </div>
 
                     {/* Meal plate details header */}
-                    <div className="bg-[#262A3B] py-10 text-white m-3 rounded-xl">
+                    <div className="bg-[#262A3B] py-10 text-white p-3 rounded-3xl">
                         <div>
-                            <h1 className="text-2xl font-extrabold pl-3">{meal.name}</h1>
+                            <h1 className="text-2xl font-extrabold pl-3 xl:text-[30px]">{meal.name}</h1>
                         </div>
                         <div className="flex items-center  pl-3 font-bold ">
                             <h3 className="text-[#3FC660] text-2xl">Rs.</h3>
@@ -33,7 +36,7 @@ function MealPlanCustomize() {
 
                             <div className="pl-3">
                                 <div >
-                                    <h3 className="font-semibold">Size</h3>
+                                    <h3 className="font- xl:text-[30px]">Size</h3>
                                     <div className="flex gap-2">
                                         <button className="bg-[#3FC660] w-[30px] h-[30px]  rounded-[7px] text-[14px]">S</button>
                                         <button className="bg-[#3FC660] w-[30px] h-[30px]  rounded-[7px] text-[14px]">M</button>
@@ -42,7 +45,7 @@ function MealPlanCustomize() {
                                 </div>
                                 <div className="mt-2" >
 
-                                    <h3 className="font-semibold">Quantity</h3>
+                                    <h3 className="font-semibold xl:text-[30px]">Quantity</h3>
                                     <div className="flex gap-2 items-center">
                                         <button className="bg-[#3FC660] w-[30px] h-[30px]  rounded-[7px] text-[14px]">-</button>
                                         <h4>3</h4>
@@ -51,7 +54,7 @@ function MealPlanCustomize() {
                                 </div>
                                 <div className="mt-2" >
 
-                                    <h3 className="font-semibold">Total Nutrions</h3>
+                                    <h3 className="font-semibold xl:text-[30px]">Total Nutrions</h3>
                                     <div className="flex gap-1">
                                         <div className=" items-center font-light text-[14px]">
                                             <h4>Portionsg</h4>
@@ -71,7 +74,7 @@ function MealPlanCustomize() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="w-[260px] pr-3">
+                            <div className="xl:w-[460px] pr-3 ">
                                 <img src={meal.img} alt="" />
                             </div>
                         </div>
@@ -97,8 +100,9 @@ function MealPlanCustomize() {
                             <BreakfastMealCart key={index} meal={meal} />
                         ))}
                     </div>
-                    <Footer />
+                    
                 </div>
+                <Footer />
 
             </div>
         </>

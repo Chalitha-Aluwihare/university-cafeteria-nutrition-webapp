@@ -8,7 +8,7 @@ function NutritionTable({ meal }) {
                     <h3 className="font-semibold text-base text-[#3FC660]">{meal.name}</h3>
                     <span className="text-xs  text-[#3FC660]">{meal.portion}g</span>
                 </div>
-                <div className="flex justify-between items-center mb-1">
+                <div className="flex justify-between items-center mb-1 text-right">
                     <div>Calories <strong>{meal.calories}kcal</strong></div>
                     <div>Carbs <strong>{meal.carbs}g</strong></div>
                     <div>Protein <strong>{meal.protein}g</strong></div>
