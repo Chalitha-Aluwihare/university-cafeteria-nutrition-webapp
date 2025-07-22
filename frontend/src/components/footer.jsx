@@ -9,12 +9,14 @@ import { FaFacebook } from "react-icons/fa";
 function Footer() {
     return (
         <>
-            <div className=' bg-[#262A3B] text-white py-20  grid grid-cols-5'>
-                <div className='px-10'>
-                    <img className='' src={LogoImg} alt="" />
-                </div>
-                <div className='px-10'>
-                    <h1 className='text-[20px] font-light text-[#4CCF7E] pt-2'>Popular Categories</h1>
+            <div className=' bg-[#262A3B] text-white py-20  grid lg:grid-cols-5'>
+                <div className='px-10  lg:block flex items-center justify-center'>
+                        <img className='w-1/4 lg:w-full' src={LogoImg} alt="" />
+                    </div>
+
+                <div className='px-10 text-center items-center justify-center'>
+                    
+                    <h1 className='text-[20px] font-light text-[#4CCF7E] pt-10 lg:pt-2'>Popular Categories</h1>
                     <div className='mt-2'>
                         <h3 className='text-[15px] text-[#C9C9C9]'>Main Meals</h3>
                         <h3 className='text-[15px] text-[#C9C9C9]'>Beverages</h3>
@@ -22,7 +24,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className='px-10'>
+                <div className='px-10 text-center'>
                     <h1 className='text-[20px] font-light text-[#4CCF7E] pt-2'>Get to Know Us</h1>
                     <div className='mt-2'>
                         <h3 className='text-[15px] text-[#C9C9C9]'>About Us</h3>
@@ -30,7 +32,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className='px-10'>
+                <div className='px-10 text-center'>
                     <h1 className='text-[20px] font-light text-[#4CCF7E] pt-2'>Quick Links</h1>
                     <div className='mt-2'>
                         <h3 className='text-[15px] text-[#C9C9C9]'>Home</h3>
@@ -40,7 +42,7 @@ function Footer() {
                 </div>
 
 
-                <div className='px-10'>
+                <div className='px-10 text-center'>
                     <h1 className='text-[20px] font-light text-[#4CCF7E] pt-2'>Customer Support</h1>
                     <div className='mt-2'>
                         <h3 className='text-[15px] text-[#C9C9C9]'>Help Center</h3>
@@ -50,26 +52,26 @@ function Footer() {
             </div>
 
             <div className=''>
-                    <hr className='border-1 border-[#4CCF7E]' />
-                </div>
+                <hr className='border-1 border-[#4CCF7E]' />
+            </div>
 
-            <div className=' bg-[#262A3B] text-white pt-20 pb-10 flex justify-between text-center items-center'>
-                <div className='pl-90'>
+            <div className=' bg-[#262A3B] text-white pt-20 pb-10 lg:flex justify-between text-center items-center'>
+                <div className='lg:pl-90'>
                     <h1 className='text-[20px] font-light text-[#4CCF7E] pt-2'>Powered By</h1>
                     <div className='mt-2 pb-4'>
                         <h3 className='text-[15px] text-[#C9C9C9]'>Uva Wellassa University of Sri Lanka</h3>
                     </div>
-                    <div className='px-30 flex gap-3'>
+                    <div className='flex items-center justify-center gap-3 '>
                         <FaFacebook className='' />
                         <IoLogoYoutube className='' />
                         <FaTwitter className='' />
                         <FaSquareInstagram className='' />
-
                     </div>
+
                 </div>
 
-                
-                <div className='pr-90'>
+
+                <div className='lg:pr-90'>
                     <h1 className='text-[20px] font-light text-[#4CCF7E] pt-2'>Powered By</h1>
                     <div className=''>
                         <h3 className='text-[15px] text-[#C9C9C9]'>Uva Wellassa University of Sri Lanka</h3>
