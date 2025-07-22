@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoImg from '../assets/home/BG-UniEats-W.png'
+import LogoImg from '../assets/navBar/UniEats.png'
 import { IoLogoYoutube } from "react-icons/io5";
 import { FaTwitter } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";

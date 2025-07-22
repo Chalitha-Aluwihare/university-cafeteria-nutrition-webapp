@@ -2,7 +2,7 @@ const ReviewData = [
   {
     userId: 'user001',
     name: 'Ashan Perera',
-    rating: 0,
+    rating: 2,
     review: 'I didn’t enjoy the food at all. It lacked flavor, and the portion was too small. Definitely not worth the money I spent on it today.',
   },
   {
@@ -35,30 +35,6 @@ const ReviewData = [
     rating: 4,
     review: 'Good overall! The taste was satisfying, and the food was presented nicely. I liked the spice level, and the portions were just right. Would recommend to friends.',
   },
-  {
-    userId: 'user007',
-    name: 'Isuru Senanayake',
-    rating: 3,
-    review: 'Decent meal with fair taste. Could use a bit more variety in the vegetables. The meat was cooked well, and the rice wasn’t too sticky or dry.',
-  },
-  {
-    userId: 'user008',
-    name: 'Bimasha Rathnayake',
-    rating: 2,
-    review: 'Not my favorite. The curry lacked depth, and it was slightly too oily. Service was friendly, but I was expecting a bit more from the overall experience.',
-  },
-  {
-    userId: 'user009',
-    name: 'Harsha Bandara',
-    rating: 5,
-    review: 'Exceptional food! Every bite was full of flavor, and the service was great. I really enjoyed the meal and would gladly come back again any day.',
-  },
-  {
-    userId: 'user010',
-    name: 'Dinithi Amarasinghe',
-    rating: 1,
-    review: 'The meal was disappointing. Cold when it arrived, and the flavors were off. I couldn’t finish it. Hope the team improves both taste and delivery speed soon.',
-  }
 ];
 
 export default ReviewData;
