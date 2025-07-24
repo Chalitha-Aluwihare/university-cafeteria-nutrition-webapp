@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
-import { HiChatAlt, HiCog } from "react-icons/hi";
 import NavBar from '../components/navBar';
-import MotionImg01 from '../assets/home/motion/Motion-01.png'
 import ArtBord01 from '../assets/home/ArtBord-01.png'
 import ArtBord02 from '../assets/home/ArtBord-02.png'
 import ArtBord03 from '../assets/home/ArtBord-03.png'
@@ -59,7 +58,9 @@ function Home() {
 
           </motion.h1>
 
-          <button className='bg-[#4CCF7E]  lg:text-2xl  rounded-full lg:mt-6 mt-3  lg:px-15 px-6 lg:py-3 py-1  hover:bg-white'>Get Started</button>
+          <div className='pt-10'>
+            <Link to="/mealPlan" className='bg-[#4CCF7E]  lg:text-2xl  rounded-full lg:mt-6 mt-3  lg:px-15 px-6 lg:py-3 py-1  hover:bg-white'>Get Started</Link>
+          </div>
         </div >
         <motion.div
         className=''
