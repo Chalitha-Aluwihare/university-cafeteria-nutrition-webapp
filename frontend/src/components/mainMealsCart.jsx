@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 
 function MealCart({ meal }) {
     return (
@@ -32,7 +32,7 @@ function MealCart({ meal }) {
                     <h3 className='font-bold text-[20px]'>{meal.price}</h3>
                     <h3 className='font-bold text-[#B5B5B5] text-[16px]'>.00</h3>
                 </div>
-                <button className='bg-[#3FC660] w-[163px] h-[30px] rounded-[6px] text-white'>Customize Meal</button>
+                <Link to="./mealPlanCustomize" className='bg-[#3FC660] w-[163px] h-[30px] rounded-[6px] text-white'>Customize Meal</Link>
                 <button className='bg-[#6B6B6B] w-[163px] h-[30px] rounded-[6px] text-white mt-1'>Order Now</button>
 
             </div>

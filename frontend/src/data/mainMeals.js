@@ -14,7 +14,7 @@ const mainMeals = [
         totalCarbs: 50,
         totalProtein: 5,
         totalFat: 6,
-        price: 150,
+        price: 80,
         items: [
           {
             name: "String Hoppers (5 pcs)",
@@ -33,6 +33,28 @@ const mainMeals = [
             fat: 4
           },
           {
+            name: "Pol Sambol",
+            portion: 50,
+            calories: 40,
+            carbs: 7,
+            protein: 1,
+            fat: 1
+          },
+          {
+            name: "Pol Sambol",
+            portion: 50,
+            calories: 40,
+            carbs: 7,
+            protein: 1,
+            fat: 1
+          },{
+            name: "Pol Sambol",
+            portion: 50,
+            calories: 40,
+            carbs: 7,
+            protein: 1,
+            fat: 1
+          },{
             name: "Pol Sambol",
             portion: 50,
             calories: 40,
