@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 
-function ShortEatsCart({ meal }) {
+function ShortEatsCart({food, meal }) {
     return (
         <>
             <div className='bg-[#F8F6F7] flex-shrink-0 w-[184px] h-[410px] overflow-x-auto flex flex-col items-center justify-center text-center rounded-[21px]'>
@@ -9,6 +10,10 @@ function ShortEatsCart({ meal }) {
                 <div>
                     <img src={meal.img.url} alt="" className='w-[148px]' />
                     <h3 className='font-bold text-xl'>{meal.name}</h3>
+                    <div className='flex items-center justify-center gap-2'>
+                    <p>Availablety</p>
+                    <button className={`w-3 h-3 rounded-xl ${meal.available ? 'bg-green-500' : 'bg-red-500'}`}></button>
+                    </div>
                 </div>
                 <div className='flex gap-1 items-center justify-center'>
                     <div className='text-left'>
@@ -32,7 +37,7 @@ function ShortEatsCart({ meal }) {
                     <h3 className='font-bold text-[20px]'>{meal.price}</h3>
                     <h3 className='font-bold text-[#B5B5B5] text-[16px]'>.00</h3>
                 </div>
-                <button className='bg-[#3FC660] w-[163px] h-[30px] rounded-[6px] text-white'>Customize Meal</button>
+                <Link to={`./mealPlanCustomize/${food}`} className='bg-[#3FC660] w-[163px] h-[30px] rounded-[6px] text-white'>Customize Meal</Link>
                 <button className='bg-[#6B6B6B] w-[163px] h-[30px] rounded-[6px] text-white mt-1'>Order Now</button>
 
             </div>

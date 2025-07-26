@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import CategoryItem from "../components/catagorieItem";
 import MainMealsCart from "../components/mainMealsCart.jsx"
-import BeveragesCart from "../pages/beveragesCart.jsx";
-import ShortEatsCart from "../pages/shortEatsCart.jsx";
+import BeveragesCart from "../components/beveragesCart.jsx";
+import ShortEatsCart from "../components/shortEatsCart.jsx";
 import Footer from "../components/footer"
 import MainMeals from '../data/mainMeals.js'
 import ShortEats from '../data/shortEats.js'
 import Beverages from '../data/beverages.js'
 import NavBar from "../components/navBar.jsx";
+import { main } from "framer-motion/client";
 
 function MealPlan() {
     const [food, setFood] = useState("MainMeals");
+    const [handel, setHandel] = useState(0); // This stores selected ID
+
+    const handelClick = (id) => {
+        setHandel(id);
+    };
+
     return (
         <div className=''>
 
@@ -28,7 +35,7 @@ function MealPlan() {
                     <h3 className="text-[#3FC660] pr-3">view all</h3>
                 </div>
                 <div>
-                    <CategoryItem food={food} setFood={setFood} />
+                    <CategoryItem setFood={setFood} />
 
                 </div>
                 <div className="flex justify-between mt-5">
@@ -38,16 +45,25 @@ function MealPlan() {
                 {
                     food === "MainMeals" &&
                     <div className="flex gap-3 overflow-x-auto space-x-4 p-2">
-                        {MainMeals.map(meal => (
-                            <MainMealsCart key={meal.id} meal={meal} />
+                        {MainMeals.map(mainMeal => (
+                            <MainMealsCart key={mainMeal.id}
+   
+                            
+                                id={mainMeal.id}         
+                                meal={mainMeal}
+                                food={food}
+                                setFood={setFood}
+                                setHandel={setHandel}
+                                handel={handel}
+                                onClick={handelClick} />
                         ))}
                     </div>
                 }
                 {
                     food === "Beverages" &&
                     <div className="flex gap-3 overflow-x-auto space-x-4 p-2">
-                        {Beverages.map(meal => (
-                            <BeveragesCart key={meal.id} meal={meal} />
+                        {Beverages.map(Beverages => (
+                            <BeveragesCart key={Beverages.id} meal={Beverages} food={food} setHandel={setHandel} handel={handel} />
                         ))}
                     </div>
                 }
@@ -55,7 +71,7 @@ function MealPlan() {
                     food === "ShortEats" &&
                     <div className="flex gap-3 overflow-x-auto space-x-4 p-2">
                         {ShortEats.map(meal => (
-                            <ShortEatsCart key={meal.id} meal={meal} />
+                            <ShortEatsCart key={meal.id} meal={meal} food={food} setFood={setFood} setHandel={setHandel} handel={handel} />
                         ))}
                     </div>
                 }

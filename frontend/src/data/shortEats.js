@@ -1,5 +1,5 @@
-// import EggRoll from "./../assets/shortEats/EggRool.png"
-import EggRoll from './../assets/mainMeals/BreakfastMeal.png';
+import EggRoll from './../assets/shortEats/EggRoll.png';
+
 
 const shortEats = [
   {
@@ -17,7 +17,7 @@ const shortEats = [
   },
   {
     id: 2,
-    img: "VegSamosa.png",
+    img: EggRoll,
     name: "Veg Samosa",
     available: true,
     rating: 4.2,
@@ -30,7 +30,7 @@ const shortEats = [
   },
   {
     id: 3,
-    img: "ChickenPatties.png",
+    img: EggRoll,
     name: "Chicken Patties",
     available: true,
     rating: 4.5,
@@ -43,7 +43,7 @@ const shortEats = [
   },
   {
     id: 4,
-    img: "FishBun.png",
+    img: EggRoll,
     name: "Fish Bun",
     available: true,
     rating: 4.3,
@@ -56,7 +56,7 @@ const shortEats = [
   },
   {
     id: 5,
-    img: "CheeseKottuBun.png",
+    img: EggRoll,
     name: "Cheese Kottu Bun",
     available: true,
     rating: 4.6,
