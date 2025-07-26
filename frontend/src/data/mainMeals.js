@@ -5,7 +5,7 @@ const mainMeals = [
     id: 1,
     img: BreakfastMeal,
     name: "Breakfast Meal",
-    available: true,
+    available: false,
     rating: 4.6,
     portions: {
       small: {
@@ -40,28 +40,7 @@ const mainMeals = [
             protein: 1,
             fat: 1
           },
-          {
-            name: "Pol Sambol",
-            portion: 50,
-            calories: 40,
-            carbs: 7,
-            protein: 1,
-            fat: 1
-          },{
-            name: "Pol Sambol",
-            portion: 50,
-            calories: 40,
-            carbs: 7,
-            protein: 1,
-            fat: 1
-          },{
-            name: "Pol Sambol",
-            portion: 50,
-            calories: 40,
-            carbs: 7,
-            protein: 1,
-            fat: 1
-          }
+          
         ]
       },
       large: {

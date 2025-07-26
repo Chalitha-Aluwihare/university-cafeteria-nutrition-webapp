@@ -167,7 +167,7 @@ function Home() {
         ))}
       </motion.div>
       <div className='flex justify-between lg:px-10 px-5'>
-        <button className='bg-[#4CCF7E] lg:py-4 lg:px-10 lg:rounded-full lg:text-xl py-1 px-5 rounded-full'>Add Revie</button>
+        <button className='bg-[#4CCF7E] lg:py-4 lg:px-10 lg:rounded-full lg:text-xl py-1 px-5 rounded-full'>Add Review</button>
         <button className='lg:text-xl text-[#4CCF7E]'>See More</button>
       </div>
 

@@ -4,7 +4,7 @@ import MainMeals from "../assets/catagorieItem/balanced-diet.png"
 import ShortEats from "../assets/catagorieItem/street-food.png"
 import Baverages from "../assets/catagorieItem/cocktail.png"
 
-function CategoryItem({ food, setFood }) {
+function CategoryItem({ setFood }) {
 
   const [active, setActive] = useState(1);
 

@@ -12,6 +12,7 @@ import NutritionalHistory from './pages/nutritionalHistory';
 import OrderFood from './pages/orderFood';
 import NavBar from './components/navBar';
 import AbountUs from './pages/aboutUs';
+import ScrollToTop from './components/scrollToTop';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <NavBar
         loginModelOpen={loginModelOpen}
         signinModelOpen={signinModelOpen}
@@ -48,6 +50,8 @@ function App() {
 
         <Route path="/mealPlan" element={<MealPlan />} />
         <Route path="/mealPlan/mealPlanCustomize" element={<MealPlanCustomize />} />
+        <Route path="/mealPlan/mealPlanCustomize/:food/:handel" element={<MealPlanCustomize />} />
+        
 
         <Route path="/nutritionalHistory" element={<NutritionalHistory />} />
         <Route path="/orderFood" element={<OrderFood />} />

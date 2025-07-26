@@ -1,7 +1,9 @@
+import IcedTea from "../assets/beverages/IcedTea.png";
+
 const beverages = [
   {
     id: 1,
-    img: "IcedTea.png",
+    img: IcedTea,
     name: "Iced Tea",
     available: true,
     rating: 4.3,
@@ -14,7 +16,7 @@ const beverages = [
   },
   {
     id: 2,
-    img: "MilkshakeBanana.png",
+    img: IcedTea,
     name: "Banana Milkshake",
     available: true,
     rating: 4.6,
@@ -27,7 +29,7 @@ const beverages = [
   },
   {
     id: 3,
-    img: "LimeJuice.png",
+    img: IcedTea,
     name: "Fresh Lime Juice",
     available: true,
     rating: 4.2,
@@ -40,7 +42,7 @@ const beverages = [
   },
   {
     id: 4,
-    img: "ChocolateDrink.png",
+    img: IcedTea,
     name: "Chocolate Drink",
     available: true,
     rating: 4.7,
@@ -53,7 +55,7 @@ const beverages = [
   },
   {
     id: 5,
-    img: "KingCoconut.png",
+    img: IcedTea,
     name: "King Coconut Water",
     available: true,
     rating: 4.8,
