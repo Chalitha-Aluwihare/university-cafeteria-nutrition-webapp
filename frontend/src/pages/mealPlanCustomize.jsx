@@ -108,7 +108,7 @@ function MealPlanCustomize({ }) {
             protein: 0,
             fat: 0,
             quantity: 0,
-            price:0,
+            price: 0,
         };
 
         Object.values(selectedMeals).forEach(meal => {
@@ -125,7 +125,13 @@ function MealPlanCustomize({ }) {
 
     const totalNutrition = getTotalNutrition();
 
-    
+    const basePrice = sizeActive === 'S'
+        ? meal.portions.small.price * itemCount
+        : meal.portions.large.price * itemCount;
+
+    const totalPrice = basePrice + totalNutrition.price;
+
+
 
 
 
@@ -152,7 +158,7 @@ function MealPlanCustomize({ }) {
                                 <h3 className="text-[#3FC660] text-2xl">Rs.</h3>
                                 {/* <h1>{food}</h1>
                         <h1>{handel}</h1> */}
-                                <h2 className="text-[#3FC660] text-3xl">{ (sizeActive === 'S' ? meal.portions.small.price * itemCount : meal.portions.large.price * itemCount) + totalNutrition.price}</h2>
+                                <h2 className="text-[#3FC660] text-3xl">{totalPrice}</h2>
                                 <h3 className="text-[#3FC660] text-2xl">.00</h3>
                             </div>
                             {/* (setSizeActive === 'S' ? meal.portions.small.price * itemCount  : meal.portions.large.price * itemCount  ) + */}
@@ -203,7 +209,21 @@ function MealPlanCustomize({ }) {
                                 </div>
                             </div>
                             <div className="mt-5">
-                                <button onClick={() => navigate("/orderFood")} className="bg-[#3FC660] py-2 px-10 rounded-[7px] text-white text-center font-semibold text-xl">Place Order</button>
+                                <button
+                                    onClick={() =>
+                                        navigate('/orderFood', {
+                                            state: {
+                                                mealName: meal.name,
+                                                totalPrice: totalPrice,
+                                                // mealImage: meal.image,
+                                                // nutritionalInfo: totalNutrition,
+                                                // size: sizeActive,
+                                                // quantity: itemCount,
+                                            }
+                                        })
+                                    }
+                                    className="bg-[#3FC660] py-2 px-10 rounded-[7px] text-white text-center font-semibold text-xl">
+                                    Place Order</button>
                             </div>
                         </div>
                         <div className="pr-3">
@@ -229,43 +249,43 @@ function MealPlanCustomize({ }) {
                         Add Your Favorites & Make it Your Own
                     </h3>
 
-                                        
 
-                    { meal.name === "Breakfast Meal" &&
+
+                    {meal.name === "Breakfast Meal" &&
                         <div className="flex gap-3 overflow-x-auto space-x-4 p-2 mb-10">
-                        {BreakfasrMeal.map(meal => (
-                            <BreakfastMealCart
-                                key={meal.id}
-                                meal={meal}
-                                food={food}
-                                onAdd={addMealItem}
-                                onRemove={removeMealItem} />
-                        ))}
-                    </div>
+                            {BreakfasrMeal.map(meal => (
+                                <BreakfastMealCart
+                                    key={meal.id}
+                                    meal={meal}
+                                    food={food}
+                                    onAdd={addMealItem}
+                                    onRemove={removeMealItem} />
+                            ))}
+                        </div>
                     }
-                    { meal.name === "Lunch Meal" &&
+                    {meal.name === "Lunch Meal" &&
                         <div className="flex gap-3 overflow-x-auto space-x-4 p-2 mb-10">
-                        {LunchMeal.map(meal => (
-                            <LunchMealCart
-                                key={meal.id}
-                                meal={meal}
-                                food={food}
-                                onAdd={addMealItem}
-                                onRemove={removeMealItem} />
-                        ))}
-                    </div>
+                            {LunchMeal.map(meal => (
+                                <LunchMealCart
+                                    key={meal.id}
+                                    meal={meal}
+                                    food={food}
+                                    onAdd={addMealItem}
+                                    onRemove={removeMealItem} />
+                            ))}
+                        </div>
                     }
-                    { meal.name === "Dinner Meal" &&
+                    {meal.name === "Dinner Meal" &&
                         <div className="flex gap-3 overflow-x-auto space-x-4 p-2 mb-10">
-                        {DinnerMeal.map(meal => (
-                            <DinnerMealCart
-                                key={meal.id}
-                                meal={meal}
-                                food={food}
-                                onAdd={addMealItem}
-                                onRemove={removeMealItem} />
-                        ))}
-                    </div>
+                            {DinnerMeal.map(meal => (
+                                <DinnerMealCart
+                                    key={meal.id}
+                                    meal={meal}
+                                    food={food}
+                                    onAdd={addMealItem}
+                                    onRemove={removeMealItem} />
+                            ))}
+                        </div>
                     }
 
                 </div>
