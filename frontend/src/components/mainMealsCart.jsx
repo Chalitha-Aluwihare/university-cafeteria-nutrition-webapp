@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
 
 function MealCart({ id, meal, food, setFood, setHandel, handel, onClick }) {
+    const navigate = useNavigate();
 
     const handleInternalClick = () => {
         onClick(id); 
@@ -44,7 +46,7 @@ function MealCart({ id, meal, food, setFood, setHandel, handel, onClick }) {
                     <h3 className='font-bold text-[#B5B5B5] text-[16px]'>.00</h3>
                 </div>
                 <Link to={`/mealPlan/mealPlanCustomize/${food}/${id}`} className='bg-[#3FC660] w-[163px] h-[30px] rounded-[6px] text-white' onClick={handleInternalClick} >Customize Meal</Link>
-                <button className='bg-[#6B6B6B] w-[163px] h-[30px] rounded-[6px] text-white mt-1'>Order Now</button>
+                <button onClick={() => navigate("/orderFood")} className='bg-[#6B6B6B] w-[163px] h-[30px] rounded-[6px] text-white mt-1'>Order Now</button>
 
             </div>
         </>

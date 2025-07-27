@@ -44,11 +44,11 @@ function MealPlan() {
                 </div>
                 {
                     food === "MainMeals" &&
-                    <div className="flex gap-3 overflow-x-auto space-x-4 p-2">
+                    <div className="flex gap-3 overflow-x-auto space-x-4 p-2 mb-10">
                         {MainMeals.map(mainMeal => (
                             <MainMealsCart key={mainMeal.id}
    
-                            
+
                                 id={mainMeal.id}         
                                 meal={mainMeal}
                                 food={food}
@@ -61,7 +61,7 @@ function MealPlan() {
                 }
                 {
                     food === "Beverages" &&
-                    <div className="flex gap-3 overflow-x-auto space-x-4 p-2">
+                    <div className="flex gap-3 overflow-x-auto space-x-4 p- mb-10">
                         {Beverages.map(Beverages => (
                             <BeveragesCart key={Beverages.id} meal={Beverages} food={food} setHandel={setHandel} handel={handel} />
                         ))}
@@ -69,7 +69,7 @@ function MealPlan() {
                 }
                 {
                     food === "ShortEats" &&
-                    <div className="flex gap-3 overflow-x-auto space-x-4 p-2">
+                    <div className="flex gap-3 overflow-x-auto space-x-4 p-2 mb-10">
                         {ShortEats.map(meal => (
                             <ShortEatsCart key={meal.id} meal={meal} food={food} setFood={setFood} setHandel={setHandel} handel={handel} />
                         ))}

@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
 
 
-function ShortEatsCart({food, meal }) {
+function ShortEatsCart({ meal }) {
+    const navigate = useNavigate();
+
     return (
         <>
             <div className='bg-[#F8F6F7] flex-shrink-0 w-[184px] h-[410px] overflow-x-auto flex flex-col items-center justify-center text-center rounded-[21px]'>
@@ -37,8 +39,7 @@ function ShortEatsCart({food, meal }) {
                     <h3 className='font-bold text-[20px]'>{meal.price}</h3>
                     <h3 className='font-bold text-[#B5B5B5] text-[16px]'>.00</h3>
                 </div>
-                <Link to={`./mealPlanCustomize/${food}`} className='bg-[#3FC660] w-[163px] h-[30px] rounded-[6px] text-white'>Customize Meal</Link>
-                <button className='bg-[#6B6B6B] w-[163px] h-[30px] rounded-[6px] text-white mt-1'>Order Now</button>
+                <button onClick={() => navigate("/orderFood")} className='bg-[#3FC660] w-[163px] h-[30px] rounded-[6px] text-white'>Order Now</button>
 
             </div>
         </>

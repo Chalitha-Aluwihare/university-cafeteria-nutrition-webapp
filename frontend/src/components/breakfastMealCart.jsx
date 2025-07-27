@@ -1,8 +1,9 @@
 import React from 'react';
-import BreakfastMeal from '../data/BreakfastMeal.js'
 
-function breakfastMealCart({ meal }) {
+function breakfastMealCart({ meal, onAdd, onRemove}) {
+
     return (
+
         <div>
 
             <div className='bg-[#F8F6F7] flex-shrink-0 w-[184px] h-[410px] overflow-x-auto flex flex-col items-center justify-center text-center rounded-[21px]'>
@@ -20,7 +21,7 @@ function breakfastMealCart({ meal }) {
                         <h5>fat</h5>
                     </div>
                     <div className='font-bold'>
-                        <h5>:{meal.porthions} g</h5>
+                        <h5>:{meal.portions} g</h5>
                         <h5>:{meal.calories} g</h5>
                         <h5>:{meal.carbs} g</h5>
                         <h5>:{meal.protein} g</h5>
@@ -33,10 +34,10 @@ function breakfastMealCart({ meal }) {
                     <h3 className='font-bold text-[20px]'>{meal.price}</h3>
                     <h3 className='font-bold text-[#B5B5B5] text-[16px]'>.00</h3>
                 </div>
-                <div className='flex justify-betweeb mt-3 gap-5'>
-                    
-                    <button className='bg-[#6B6B6B] w-[30px] h-[30px] rounded-[7px] text-white'>-</button>
-                    <button className='bg-[#3FC660] w-[30px] h-[30px] rounded-[7px] text-white'>+</button>
+                <div className='flex justify-between mt-3 gap-5'>
+
+                    <button className='bg-[#6B6B6B] w-[30px] h-[30px] rounded-[7px] text-white' onClick={() => onRemove(meal)}>-</button>
+                    <button className='bg-[#3FC660] w-[30px] h-[30px] rounded-[7px] text-white'onClick={() => onAdd(meal)}>+</button>
                 </div>
 
             </div>

@@ -9,7 +9,7 @@ const mainMeals = [
     rating: 4.6,
     portions: {
       small: {
-        size: 150,
+        size: 350,
         totalCalories: 280,
         totalCarbs: 50,
         totalProtein: 5,
@@ -44,7 +44,7 @@ const mainMeals = [
         ]
       },
       large: {
-        size: 250,
+        size: 920,
         totalCalories: 450,
         totalCarbs: 80,
         totalProtein: 8,
