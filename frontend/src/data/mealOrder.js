@@ -17,7 +17,7 @@ const mealOrder = [
     orderCode: "G7H8I9",
     mealName: "Lunch Meal",
     orderDateTime: "2025-07-27T13:00:00",
-    status: "Cancelled",
+    status: "Delivered",
     price: 80,
   },
   {

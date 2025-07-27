@@ -77,6 +77,7 @@ function NavBar({ }) {
                             <Link to="" className='font-2 text-white pl-4'>Order Food</Link>
                             <Link to="/nutritionalHistory" className='font-2 text-white pl-4'>Nutrition History</Link>
                             <Link to="/aboutUs" className='font-2 text-white pl-4'>About Us</Link>
+                            <Link to="/foodSuggestions" className='font-2 text-white pl-4'>Food Suggestions</Link>
                             <button onClick={loginModelOpen} className='text-white bg-[#4CCF7E] px-9 py-2 rounded-full font-bold ml-4'>Login</button>
                             <button onClick={signinModelOpen} className='text-black bg-[#E2E2E2] px-8 py-2 rounded-full font-bold ml-4 '>SignUp</button>
                         </div>
@@ -96,6 +97,8 @@ function NavBar({ }) {
                         <h5 className='p-3'><Link to="/nutritionalHistory" className='text-white opacity-50'>Nutrition History</Link></h5>
                         <hr className='border-[0.2px] border-[#4CCF7E] opacity-50' />
                         <h5 className='p-3'><Link to="" className='text-white opacity-50'>About Us</Link></h5>
+                        <hr className='border-[0.2px] border-[#4CCF7E] opacity-50' />
+                        <h5 className='p-3'><Link to="/foodSuggestions" className='text-white opacity-50'>Food Suggestions</Link></h5>
                         <hr className='border-[0.2px] border-[#4CCF7E] opacity-50' />
                         <h5 className='p-3 my-2'><button onClick={loginModelOpen} className='text-white bg-[#4CCF7E] px-9 py-2 rounded-full '>Login</button></h5>
                         <hr className='border-[0.2px] border-[#4CCF7E] opacity-50' />

@@ -19,7 +19,7 @@ function OrderFoodCart() {
                 orderDateTime: new Date().toISOString(),
                 status: "Preparing",
                 price: state.totalPrice,
-                countdown: 600, // 10 minutes
+                countdown: 300, // 5 minutes
             };
             return [newOrder, ...orderData];
         }
@@ -69,7 +69,7 @@ function OrderFoodCart() {
 
     return (
         <>
-            <div className="p-6 pt-20 max-w-6xl mx-auto">
+            <div className="p-6 pt-20 max-w-6xl mx-auto px-20">
                 <div className='flex justify-between items-center mb-6'>
                     <div className="flex items-center gap-2 bg-[#F8F6F7] py-2 px-5 rounded-full">
                         <IoCaretBack />
@@ -97,7 +97,7 @@ function OrderFoodCart() {
                                 className={`rounded-lg transition-shadow duration-300 ${statusClass} hover:shadow-xl`}
                             >
                                 <div className="p-5 flex flex-col gap-4">
-                                    <h2 className="text-3xl font-semibold">{order.mealName}</h2>
+                                    <h2 className="text-2xl font-semibold">{order.mealName}</h2>
 
                                     <div className="text-sm sm:text-base opacity-80">
                                         <p className='flex items-center gap-2'>
