@@ -15,6 +15,7 @@ import AbountUs from './pages/aboutUs';
 import ScrollToTop from './components/scrollToTop';
 import NutritionTable from './components/nutritionTable';
 import OrderFoodCart from './components/orderFoodCart';
+import FoodSuggesions from './pages/foodSuggestions';
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
         <Route path="/nutritionalHistory" element={<NutritionalHistory />} />
         <Route path="/orderFood" element={<OrderFood />} />
         <Route path="/orderFoodCart" element={<OrderFoodCart />} />
+        <Route path="/foodSuggestions" element={<FoodSuggesions />} />
         {/* <Route path="/mealPlan/mealPlanCustomize/MainMeals/:id/orderFood" element={<MealPlanCustomize />} /> */}
 
         <Route path="/aboutUs" element={<AbountUs />} />
