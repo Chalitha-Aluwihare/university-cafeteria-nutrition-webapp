@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from 'react';
+import UniEats from '../assets/UniEats.png'
 
 function MainMeals() {
     const [active, setActive] = useState('Breakfast');
@@ -15,19 +16,28 @@ function MainMeals() {
 
     return (
         <div className="pt-20">
-            <div className="flex gap-3 px-30">
-                {['Breakfast', 'Lunch', 'Dinner'].map((meal) => (
-                    <button
-                        key={meal}
-                        className={`py-2 px-4 rounded-full text-xl font-bold ${active === meal
-                            ? 'bg-[#4CCF7E] text-white'
-                            : 'bg-[#F8F6F7] text-black'
-                            }`}
-                        onClick={() => setActive(meal)}
-                    >
-                        {meal}
-                    </button>
-                ))}
+
+            <div className="flex items-center justify-between px-30">
+
+                <div className="flex gap-3">
+                    {['Breakfast', 'Lunch', 'Dinner'].map((meal) => (
+                        <button
+                            key={meal}
+                            className={`py-2 px-4 rounded-full text-xl font-bold ${active === meal
+                                ? 'bg-[#4CCF7E] text-white'
+                                : 'bg-[#F8F6F7] text-black'
+                                }`}
+                            onClick={() => setActive(meal)}
+                        >
+                            {meal}
+                        </button>
+                    ))}
+                    
+                </div>
+                <div>
+                        <img className="w-30" src={UniEats} alt="" />
+                    </div>
+
             </div>
             {active === 'Breakfast' && (
                 <div className="mt-5">
@@ -109,7 +119,7 @@ function MainMeals() {
                                             className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                                         />
                                     </div>
-                                    
+
                                     <div>
                                         <label className="text-lg">Calories of Food Item</label>
                                         <input
@@ -185,7 +195,7 @@ function MainMeals() {
                                 type="submit"
                                 className="bg-[#4CCF7E] text-white px-4 py-2 rounded mb-5"
                             >
-                                Add Food Item 
+                                Add Food Item
                             </button>
                         </form>
 
