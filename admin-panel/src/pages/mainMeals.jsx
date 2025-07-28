@@ -439,7 +439,7 @@ function MainMeals() {
                                             <td className="border border-gray-400 px-2 py-1">
                                                 <button
                                                     onClick={() => handleDelete(item.id)}
-                                                    className=" text-red-500 font-bold px-2 py-1 rounded hover:bg-red-600"
+                                                    className=" text-red-500 font-bold px-2 py-1 rounded"
                                                 >
                                                     Delete
                                                 </button>
@@ -646,7 +646,7 @@ function MainMeals() {
                                             <td className="border border-gray-400 px-2 py-1">
                                                 <button
                                                     onClick={() => handleDelete(item.id)}
-                                                    className=" text-red-500 font-bold px-2 py-1 rounded hover:bg-red-600"
+                                                    className=" text-red-500 font-bold px-2 py-1 rounded"
                                                 >
                                                     Delete
                                                 </button>

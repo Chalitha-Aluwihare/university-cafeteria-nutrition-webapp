@@ -14,7 +14,7 @@ function Order() {
     const [process, setProcess] = useState("Processing")
 
     const handelProcessClick =() => {
-            setProcess("Complited")
+            setProcess("Completed")
     }
 
     return (
@@ -22,9 +22,9 @@ function Order() {
             <NavBar />
             <div className='pt-20 px-30'>
                 <h1 className='text-3xl font-bold'>
-                    Order Control 
+                    Order Management 
                 </h1>
-                <p className="text-2xl text-gray-500 mb-2">Here you can manage the breakfast items.</p>
+                <p className="text-2xl text-gray-500 mb-2">Manage and Control Orders from Here</p>
 
                 <hr className='my-5 border-gray-300 border-1'/>
                 <div className='grid grid-cols-2'>

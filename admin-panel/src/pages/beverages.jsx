@@ -17,21 +17,21 @@ function Beverages (){
         <NavBar />
             <div className="pt-20">
                 <h2 className="text-3xl font-bold px-30">Beverages Menu</h2>
-                <p className="text-2xl text-gray-500 px-30 mb-2">Here you can manage the breakfast items.</p>
+                <p className="text-2xl text-gray-500 px-30 mb-2">Add and Manage Beverage Items from Here</p>
 
-                <div className="bg-gray-50 pt-1 mx-10 rounded">
+                <div className="bg-gray-100 pt-1 mx-20 rounded-4xl">
                     <form className="flex flex-col gap-4 mt-2 px-30">
 
 
                         <div className='flex flex-col gap-2'>
-                            <label className="text-2xl font-semibold">Add Food Items to Regular Breakfast Plate
+                            <label className="text-2xl font-semibold mt-2">Add Items to Beverages Menu
 
                             </label>
-                            <h1 className='text-lg font-semibold'> Enter Details for a New Small Breakfast Item</h1>
+                            <h1 className='text-lg font-semibold'> Build a New Beverage – Enter Beverage Details</h1>
                             <div>
 
                                     
-                                    <label className="text-lg">Upload Meal Plate Image</label>
+                                    <label className="text-lg">Upload Beverage Image</label>
                                     <div className='flex items-center gap-2 bg-[#4CCF7E] p-2 w-[160px] rounded text-white '>
                                         <RiFolderUploadFill className='w-7 h-7 text-white'/>
                                         <button>
@@ -46,58 +46,50 @@ function Beverages (){
                                 <div>
 
                                     
-                                    <label className="text-lg">Food Item Name</label>
+                                    <label className="text-lg">Name</label>
                                     <input
                                         type="text"
-                                        placeholder="Add Breakfast Item"
+                                        placeholder="E.g. Falooda, Iced Coffee"
                                         className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                                     />
                                 </div>
                                 <div>
-                                    <label className="text-lg">Food Item Portion</label>
+                                    <label className="text-lg">Calories</label>
                                     <input
                                         type="text"
-                                        placeholder="Add Breakfast Item"
+                                        placeholder="E.g. 220 kcal"
                                         className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                                     />
                                 </div>
                                 <div>
-                                    <label className="text-lg">Food Item Calories</label>
+                                    <label className="text-lg">Carbs</label>
                                     <input
                                         type="text"
-                                        placeholder="Add Breakfast Item"
+                                        placeholder="E.g. 30g"
                                         className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                                     />
                                 </div>
                                 <div>
-                                    <label className="text-lg">Name of Carbs</label>
+                                    <label className="text-lg">Protein</label>
                                     <input
                                         type="text"
-                                        placeholder="Add Breakfast Item"
+                                        placeholder="E.g. 20g"
                                         className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                                     />
                                 </div>
                                 <div>
-                                    <label className="text-lg">Name of Food Protein</label>
+                                    <label className="text-lg">Fat</label>
                                     <input
                                         type="text"
-                                        placeholder="Add Breakfast Item"
+                                        placeholder="E.g. 8g"
                                         className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                                     />
                                 </div>
                                 <div>
-                                    <label className="text-lg">Portion of Food Fat</label>
+                                    <label className="text-lg">Price</label>
                                     <input
                                         type="text"
-                                        placeholder="Add Breakfast Item"
-                                        className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="text-lg">Portion of Food Price</label>
-                                    <input
-                                        type="text"
-                                        placeholder="Add Breakfast Item"
+                                        placeholder="E.g. Rs.50/="
                                         className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                                     />
                                 </div>
@@ -113,12 +105,12 @@ function Beverages (){
                             type="submit"
                             className="bg-[#4CCF7E] text-white px-4 py-2 rounded mb-5"
                         >
-                            Add Breakfast Meal Food Item
+                            Add Beverage Item
                         </button>
                     </form>
 
 
-                    <label className="text-2xl font-semibold px-30">Remove Food Items from Regular Breakfast Plate
+                    <label className="text-2xl font-semibold px-30">Remove Beverage Item
 
                     </label>
                     <div className=" rounded pb-10 pt-2 px-30">
@@ -127,7 +119,6 @@ function Beverages (){
                                 <tr className="bg-gray-200">
                                     <th className="border border-gray-400 px-2 py-1 w-14 text-center">No</th>
                                     <th className="border border-gray-400 px-2 py-1 text-center">Name</th>
-                                    <th className="border border-gray-400 px-2 py-1 text-center">Portions</th>
                                     <th className="border border-gray-400 px-2 py-1 text-center">Calories</th>
                                     <th className="border border-gray-400 px-2 py-1 text-center">Carbs</th>
                                     <th className="border border-gray-400 px-2 py-1 text-center">Protein</th>
@@ -142,7 +133,6 @@ function Beverages (){
                                         <td className="border border-gray-400 px-2 py-1">{index + 1}</td>
                                         <td className="border border-gray-400 px-2 py-1 text-left">{item.col1}</td>
                                         <td className="border border-gray-400 px-2 py-1">{item.col2}</td>
-                                        <td className="border border-gray-400 px-2 py-1">{item.col3}</td>
                                         <td className="border border-gray-400 px-2 py-1">{item.col4}</td>
                                         <td className="border border-gray-400 px-2 py-1">{item.col5}</td>
 
@@ -151,7 +141,7 @@ function Beverages (){
                                         <td className="border border-gray-400 px-2 py-1">
                                             <button
                                                 onClick={() => handleDelete(item.id)}
-                                                className=" text-red-500 font-bold px-2 py-1 rounded hover:bg-red-600"
+                                                className=" text-red-500 font-bold px-2 py-1 rounded"
                                             >
                                                 Delete
                                             </button>
