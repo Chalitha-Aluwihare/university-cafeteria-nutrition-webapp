@@ -1,9 +1,11 @@
-import BreakfastMeal from './../assets/mainMeals/BreakfastMeal.png';
+import Breakfast from './../assets/mainMeals/Breakfast.png'
+import Dinner from './../assets/mainMeals/Dinner.png'
+import Lunch from './../assets/mainMeals/Lunch.png'
 
 const mainMeals = [
   {
     id: 1,
-    img: BreakfastMeal,
+    img: Breakfast,
     name: "Breakfast Meal",
     available: false,
     rating: 4.6,
@@ -89,7 +91,7 @@ const mainMeals = [
   },
   {
     id: 2,
-    img: BreakfastMeal,
+    img: Lunch,
     name: "Lunch Meal",
     available: true,
     rating: 4.8,
@@ -198,7 +200,7 @@ const mainMeals = [
   },
   {
     id: 3,
-    img: BreakfastMeal,
+    img: Dinner,
     name: "Dinner Meal",
     available: true,
     rating: 4.7,
@@ -281,261 +283,8 @@ const mainMeals = [
       }
     }
   },
-  {
-    id: 4,
-    img: BreakfastMeal,
-    name: "Dinner Meal",
-    available: true,
-    rating: 4.7,
-    portions: {
-      small: {
-        size: 180,
-        totalCalories: 500,
-        totalCarbs: 60,
-        totalProtein: 20,
-        totalFat: 15,
-        price: 280,
-        items: [
-          {
-            name: "Pittu",
-            portion: 180,
-            calories: 200,
-            carbs: 30,
-            protein: 4,
-            fat: 3
-          },
-          {
-            name: "Coconut Sambol",
-            portion: 100,
-            calories: 100,
-            carbs: 10,
-            protein: 2,
-            fat: 6
-          },
-          {
-            name: "Fish Curry",
-            portion: 150,
-            calories: 200,
-            carbs: 5,
-            protein: 14,
-            fat: 6
-          }
-        ]
-      },
-      large: {
-        size: 280,
-        totalCalories: 700,
-        totalCarbs: 90,
-        totalProtein: 28,
-        totalFat: 22,
-        price: 400,
-        items: [
-          {
-            name: "Pittu (extra)",
-            portion: 280,
-            calories: 300,
-            carbs: 45,
-            protein: 5,
-            fat: 4
-          },
-          {
-            name: "Coconut Sambol",
-            portion: 150,
-            calories: 150,
-            carbs: 15,
-            protein: 2,
-            fat: 8
-          },
-          {
-            name: "Fish Curry",
-            portion: 200,
-            calories: 250,
-            carbs: 7,
-            protein: 18,
-            fat: 7
-          },
-          {
-            name: "Dhal Curry",
-            portion: 130,
-            calories: 80,
-            carbs: 20,
-            protein: 3,
-            fat: 3
-          }
-        ]
-      }
-    }
-  },
-  {
-    id: 5,
-    img: BreakfastMeal,
-    name: "Dinner Meal",
-    available: true,
-    rating: 4.7,
-    portions: {
-      small: {
-        size: 180,
-        totalCalories: 500,
-        totalCarbs: 60,
-        totalProtein: 20,
-        totalFat: 15,
-        price: 280,
-        items: [
-          {
-            name: "Pittu",
-            portion: 180,
-            calories: 200,
-            carbs: 30,
-            protein: 4,
-            fat: 3
-          },
-          {
-            name: "Coconut Sambol",
-            portion: 100,
-            calories: 100,
-            carbs: 10,
-            protein: 2,
-            fat: 6
-          },
-          {
-            name: "Fish Curry",
-            portion: 150,
-            calories: 200,
-            carbs: 5,
-            protein: 14,
-            fat: 6
-          }
-        ]
-      },
-      large: {
-        size: 280,
-        totalCalories: 700,
-        totalCarbs: 90,
-        totalProtein: 28,
-        totalFat: 22,
-        price: 400,
-        items: [
-          {
-            name: "Pittu (extra)",
-            portion: 280,
-            calories: 300,
-            carbs: 45,
-            protein: 5,
-            fat: 4
-          },
-          {
-            name: "Coconut Sambol",
-            portion: 150,
-            calories: 150,
-            carbs: 15,
-            protein: 2,
-            fat: 8
-          },
-          {
-            name: "Fish Curry",
-            portion: 200,
-            calories: 250,
-            carbs: 7,
-            protein: 18,
-            fat: 7
-          },
-          {
-            name: "Dhal Curry",
-            portion: 130,
-            calories: 80,
-            carbs: 20,
-            protein: 3,
-            fat: 3
-          }
-        ]
-      }
-    }
-  },
-  {
-    id: 6,
-    img: BreakfastMeal,
-    name: "Dinner Meal",
-    available: true,
-    rating: 4.7,
-    portions: {
-      small: {
-        size: 180,
-        totalCalories: 500,
-        totalCarbs: 60,
-        totalProtein: 20,
-        totalFat: 15,
-        price: 280,
-        items: [
-          {
-            name: "Pittu",
-            portion: 180,
-            calories: 200,
-            carbs: 30,
-            protein: 4,
-            fat: 3
-          },
-          {
-            name: "Coconut Sambol",
-            portion: 100,
-            calories: 100,
-            carbs: 10,
-            protein: 2,
-            fat: 6
-          },
-          {
-            name: "Fish Curry",
-            portion: 150,
-            calories: 200,
-            carbs: 5,
-            protein: 14,
-            fat: 6
-          }
-        ]
-      },
-      large: {
-        size: 280,
-        totalCalories: 700,
-        totalCarbs: 90,
-        totalProtein: 28,
-        totalFat: 22,
-        price: 400,
-        items: [
-          {
-            name: "Pittu (extra)",
-            portion: 280,
-            calories: 300,
-            carbs: 45,
-            protein: 5,
-            fat: 4
-          },
-          {
-            name: "Coconut Sambol",
-            portion: 150,
-            calories: 150,
-            carbs: 15,
-            protein: 2,
-            fat: 8
-          },
-          {
-            name: "Fish Curry",
-            portion: 200,
-            calories: 250,
-            carbs: 7,
-            protein: 18,
-            fat: 7
-          },
-          {
-            name: "Dhal Curry",
-            portion: 130,
-            calories: 80,
-            carbs: 20,
-            protein: 3,
-            fat: 3
-          }
-        ]
-      }
-    }
-  }
+  
+  
   
 ];
 

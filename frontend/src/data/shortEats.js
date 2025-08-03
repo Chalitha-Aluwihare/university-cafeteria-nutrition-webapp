@@ -1,4 +1,7 @@
 import EggRoll from './../assets/shortEats/EggRoll.png';
+import VegSamosa from './../assets/shortEats/VegSamosa.png';
+import ChickenPatties from'./../assets/shortEats/ChickenPatties.png'
+import FishBun from'./../assets/shortEats/FishBun.png'
 
 
 const shortEats = [
@@ -17,7 +20,7 @@ const shortEats = [
   },
   {
     id: 2,
-    img: EggRoll,
+    img: VegSamosa,
     name: "Veg Samosa",
     available: true,
     rating: 4.2,
@@ -30,7 +33,7 @@ const shortEats = [
   },
   {
     id: 3,
-    img: EggRoll,
+    img: ChickenPatties,
     name: "Chicken Patties",
     available: true,
     rating: 4.5,
@@ -43,7 +46,7 @@ const shortEats = [
   },
   {
     id: 4,
-    img: EggRoll,
+    img: FishBun,
     name: "Fish Bun",
     available: true,
     rating: 4.3,
@@ -54,19 +57,6 @@ const shortEats = [
     totalFat: 11,
     price: 70
   },
-  {
-    id: 5,
-    img: EggRoll,
-    name: "Cheese Kottu Bun",
-    available: true,
-    rating: 4.6,
-    size: 120,
-    totalCalories: 300,
-    totalCarbs: 30,
-    totalProtein: 9,
-    totalFat: 13,
-    price: 100
-  }
 ];
 
 export default shortEats;

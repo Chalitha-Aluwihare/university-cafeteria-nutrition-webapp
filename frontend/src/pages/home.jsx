@@ -59,7 +59,8 @@ function Home() {
           </motion.h1>
 
           <div className='pt-10'>
-            <Link to="/mealPlan" className='bg-[#4CCF7E]  lg:text-2xl  rounded-full lg:mt-6 mt-3  lg:px-15 px-6 lg:py-3 py-1  hover:bg-white'>Get Started</Link>
+            <Link to="/mealPlan" className='bg-[#4CCF7E] lg:text-2xl rounded-full lg:mt-6 mt-3 lg:px-15 px-6 lg:py-3 py-1 hover:bg-white transition-colors duration-300
+'>Get Started</Link>
           </div>
         </div >
         <motion.div
