@@ -1,4 +1,8 @@
 import IcedTea from "../assets/beverages/IcedTea.png";
+import WatermelonJuice from "../assets/beverages/WatermelonJuice.png";
+import FreshLimeJuice from "../assets/beverages/FreshLimeJuice.png";
+import BananaMango from "../assets/beverages/Banana-Mango.png";
+import ChocolateDrink from "../assets/beverages/ChocolateDrink.png";
 
 const beverages = [
   {
@@ -16,7 +20,7 @@ const beverages = [
   },
   {
     id: 2,
-    img: IcedTea,
+    img: BananaMango,
     name: "Banana Milkshake",
     available: true,
     rating: 4.6,
@@ -29,7 +33,7 @@ const beverages = [
   },
   {
     id: 3,
-    img: IcedTea,
+    img: FreshLimeJuice ,
     name: "Fresh Lime Juice",
     available: true,
     rating: 4.2,
@@ -42,7 +46,7 @@ const beverages = [
   },
   {
     id: 4,
-    img: IcedTea,
+    img: ChocolateDrink,
     name: "Chocolate Drink",
     available: true,
     rating: 4.7,
@@ -53,19 +57,7 @@ const beverages = [
     totalFat: 6,
     price: 120
   },
-  {
-    id: 5,
-    img: IcedTea,
-    name: "King Coconut Water",
-    available: true,
-    rating: 4.8,
-    size: 300,
-    totalCalories: 45,
-    totalCarbs: 11,
-    totalProtein: 1,
-    totalFat: 0,
-    price: 50
-  }
+
 ];
 
 export default beverages;

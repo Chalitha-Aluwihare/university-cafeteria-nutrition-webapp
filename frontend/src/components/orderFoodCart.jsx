@@ -79,7 +79,7 @@ function OrderFoodCart() {
                         {visibleCount < orders.length && (
                             <button
                                 onClick={handleSeeMore}
-                                className="px-6 py-2 bg-[#4CCF7E] text-white text-xl rounded-full hover:bg-blue-700 transition"
+                                className="px-6 py-2 bg-[#6B6B6B] text-white text-xl rounded-full hover:bg-[#909090] transition"
                             >
                                 See More
                             </button>
