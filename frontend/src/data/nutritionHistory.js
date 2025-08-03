@@ -679,35 +679,6 @@ const nutritionHistory = [
       dinner: { calories: 870, carbs: 139, protein: 60, fat: 52 }
     }
   },
-  {
-    userId: "U001",
-    date: "2025-04-03",
-    year: 2025,
-    month: "April",
-    day: "Thursday",
-    dayNo: 3,
-    index: "93",
-    meals: {
-      breakfast: { calories: 680, carbs: 116, protein: 53, fat: 43 },
-      lunch: { calories: 980, carbs: 156, protein: 68, fat: 58 },
-      dinner: { calories: 880, carbs: 141, protein: 61, fat: 53 }
-    }
-  },
-  // April continues...
-  {
-    userId: "U001",
-    date: "2025-04-30",
-    year: 2025,
-    month: "April",
-    day: "Wednesday",
-    dayNo: 30,
-    index: "120",
-    meals: {
-      breakfast: { calories: 750, carbs: 130, protein: 60, fat: 50 },
-      lunch: { calories: 1050, carbs: 170, protein: 75, fat: 65 },
-      dinner: { calories: 950, carbs: 155, protein: 68, fat: 60 }
-    }
-  }
 ];
 
 export default nutritionHistory;
