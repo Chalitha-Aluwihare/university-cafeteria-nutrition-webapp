@@ -56,28 +56,28 @@ function NavBar({ }) {
     return (
         <>
             <div className=' bg-[#262A3B] p-3 fixed w-full h-auto z-50'>
-                <div className='flex justify-between items-center text-center '>
+                <div className='flex items-center justify-between text-center '>
                     <div>
                         <img src={LogoImg} alt="UniEats Logo" className='w-30' />
                     </div>
                     <div className='flex gap-3 lg:gap-1'>
-                        <IoIosNotifications className='text-white w-8 h-8' />
+                        <IoIosNotifications className='w-8 h-8 text-white' />
                         {!isOpen && (
-                            <TiThMenu className='text-white w-8 h-8 cursor-pointer block lg:hidden' onClick={handelMenuOpen} />
+                            <TiThMenu className='block w-8 h-8 text-white cursor-pointer lg:hidden' onClick={handelMenuOpen} />
                         )}
 
 
                         {isOpen && (
-                            <IoCloseSharp className='text-white w-8 h-8 cursor-pointer block lg:hidden' onClick={handelMenuClose} />
+                            <IoCloseSharp className='block w-8 h-8 text-white cursor-pointer lg:hidden' onClick={handelMenuClose} />
                         )}
                         <div className='flex items-center justify-center hidden lg:block'>
 
-                            <Link to="/" className='font-2 text-white pl-4'>Home</Link>
-                            <Link to="/mealPlan" className='font-2 text-white pl-4'>Meal Plan</Link>
-                            <Link to="" className='font-2 text-white pl-4'>Order Food</Link>
-                            <Link to="/nutritionalHistory" className='font-2 text-white pl-4'>Nutrition History</Link>
-                            <Link to="/aboutUs" className='font-2 text-white pl-4'>About Us</Link>
-                            <Link to="/foodSuggestions" className='font-2 text-white pl-4'>Food Suggestions</Link>
+                            <Link to="/" className='pl-4 text-white font-2'>Home</Link>
+                            <Link to="/mealPlan" className='pl-4 text-white font-2'>Meal Plan</Link>
+                            <Link to="" className='pl-4 text-white font-2'>Order Food</Link>
+                            <Link to="/nutritionalHistory" className='pl-4 text-white font-2'>Nutrition History</Link>
+                            <Link to="/aboutUs" className='pl-4 text-white font-2'>About Us</Link>
+                            <Link to="/foodSuggestions" className='pl-4 text-white font-2'>Food Suggestions</Link>
                             <button onClick={loginModelOpen} className='text-white bg-[#4CCF7E] px-9 py-2 rounded-full font-bold ml-4'>Login</button>
                             <button onClick={signinModelOpen} className='text-black bg-[#E2E2E2] px-8 py-2 rounded-full font-bold ml-4 '>SignUp</button>
                         </div>
@@ -87,7 +87,7 @@ function NavBar({ }) {
 
                 </div>
                 {isOpen && (
-                    <div className='text-center block lg:hidden  '>
+                    <div className='block text-center lg:hidden '>
                         <h5 className='p-3'><Link to="/" className='text-white opacity-50'>Home</Link></h5>
                         <hr className='border-[0.2px] border-[#4CCF7E] opacity-50' />
                         <h5 className='p-3'><Link to="/mealPlan" className='text-white opacity-50'>Meal Plan</Link></h5>
@@ -111,7 +111,7 @@ function NavBar({ }) {
 
             {/* login form */}
             {activeModel === 'login' && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center  bg-opacity-20 backdrop-brightness-80"
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-20 backdrop-brightness-80"
                     >
                     <div className="relative w-full max-w-md p-6 bg-white rounded-lg ">
                         <button
@@ -131,7 +131,8 @@ function NavBar({ }) {
                                 <input
                                     type="text"
                                     id="emailOrPhone"
-                                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-300"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
+
                                     placeholder="Enter your Email or Phone Number"
                                 />
                             </div>
@@ -143,13 +144,14 @@ function NavBar({ }) {
                                 <input
                                     type="password"
                                     id="password"
-                                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-300"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200
+"
                                     placeholder="Enter your Password"
                                 />
                             </div>
 
                             <div className="mt-1 text-sm text-right">
-                                <a href="#" className="text-blue-600 hover:underline">Forgot password?</a>
+                                <a href="#" className="text-green-500 hover:underline">Forgot password?</a>
                             </div>
 
                             <button
@@ -224,7 +226,7 @@ function NavBar({ }) {
                                 placeholder="First Name"
                                 value={formData.firstName}
                                 onChange={handleInputChange}
-                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                             />
                             <input
                                 type="text"
@@ -232,7 +234,7 @@ function NavBar({ }) {
                                 placeholder="Last Name"
                                 value={formData.lastName}
                                 onChange={handleInputChange}
-                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                             />
                             <input
                                 type="number"
@@ -240,7 +242,9 @@ function NavBar({ }) {
                                 placeholder="Age"
                                 value={formData.age}
                                 onChange={handleInputChange}
-                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                                min="1"
+                                max="120"
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                             />
                             <input
                                 type="text"
@@ -248,7 +252,9 @@ function NavBar({ }) {
                                 placeholder="Weight"
                                 value={formData.weight}
                                 onChange={handleInputChange}
-                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                                min="1"
+
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                             />
                             <input
                                 type="text"
@@ -256,23 +262,29 @@ function NavBar({ }) {
                                 placeholder="Height"
                                 value={formData.height}
                                 onChange={handleInputChange}
-                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                                min="1"
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                             />
-                            <input
-                                type="text"
-                                name="goal"
-                                placeholder="Your Fitness Goal"
-                                value={formData.goal}
-                                onChange={handleInputChange}
-                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
-                            />
+                            <select
+                                    name="goal"
+                                    value={formData.goal}
+                                    onChange={handleInputChange}
+                                    className="w-full px-3 py-2 border border-#4CCF7E rounded focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200 text-gray-500">
+                                    <option value="">Select Your Fitness Goal</option>
+                                    <option value="Lose Weight">Lose Weight</option>
+                                    <option value="Gain Muscle">Gain Muscle</option>
+                                    <option value="Maintain Weight">Maintain Weight</option>
+                                    <option value="Improve Endurance">Improve Endurance</option>
+                                    <option value="General Fitness">General Fitness</option>
+                            </select>
+
                             <input
                                 type="text"
                                 name="phoneOrEmail"
                                 placeholder="Phone number or email"
                                 value={formData.phoneOrEmail}
                                 onChange={handleInputChange}
-                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                             />
 
                             {/* Terms Checkbox */}
