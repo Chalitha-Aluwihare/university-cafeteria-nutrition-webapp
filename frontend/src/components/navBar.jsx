@@ -4,7 +4,6 @@ import LogoImg from '../assets/navBar/UniEats.png'
 import { TiThMenu } from "react-icons/ti";
 import { IoIosNotifications } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
-import { ChevronLeft } from "lucide-react";
 
 
 function NavBar({ }) {
@@ -129,7 +128,7 @@ function NavBar({ }) {
                         <img src={LogoImg} alt="UniEats Logo" className='w-30' />
                     </div>
                     <div className='flex gap-3 lg:gap-1'>
-                        <IoIosNotifications className='w-8 h-8 text-white' />
+
                         {!isOpen && (
                             <TiThMenu className='block w-8 h-8 text-white cursor-pointer lg:hidden' onClick={handelMenuOpen} />
                         )}
@@ -140,15 +139,33 @@ function NavBar({ }) {
                         )}
                         <div className='flex items-center justify-center hidden lg:block'>
 
-                            <Link to="/" className='pl-4 text-white font-2'>Home</Link>
-                            <Link to="/mealPlan" className='pl-4 text-white font-2'>Meal Plan</Link>
-                            <Link to="" className='pl-4 text-white font-2'>Order Food</Link>
-                            <Link to="/nutritionalHistory" className='pl-4 text-white font-2'>Nutrition History</Link>
-                            <Link to="/aboutUs" className='pl-4 text-white font-2'>About Us</Link>
-                            <Link to="/foodSuggestions" className='pl-4 text-white font-2'>Food Suggestions</Link>
+
+                            <div className="flex items-center space-x-2">
+                                <Link to="/" className='pl-4 text-white font-2'>Home</Link>
+                                <Link to="/mealPlan" className='pl-4 text-white font-2'>Meal Plan</Link>
+                                <Link to="" className='pl-4 text-white font-2'>Order Food</Link>
+                                <Link to="/nutritionalHistory" className='pl-4 text-white font-2'>Nutrition History</Link>
+                                <Link to="/aboutUs" className='pl-4 text-white font-2'>About Us</Link>
+
+                                <Link to="/foodSuggestions" className='pl-4 text-white font-2'>Food Suggestions</Link>
+                                <Link><img src={Noti} className="w-8" alt="Notifications" /></Link>
+                                <Link to="/userProfile" ><img src={Profile} className="w-8" alt="Profile" /></Link>
+                            </div>
+
+                            {/* <Link><img src={Noti} className='w-1/20' alt="" /></Link>
+                            <Link><img src={Profile} className='w-1/20' alt="" /></Link> */}
                             <button onClick={loginModelOpen} className='text-white bg-[#4CCF7E] px-9 py-2 rounded-full font-bold ml-4'>Login</button>
                             <button onClick={signinModelOpen} className='text-black bg-[#E2E2E2] px-8 py-2 rounded-full font-bold ml-4 '>SignUp</button>
+
+
                         </div>
+                        <div className='flex items-center justify-center'>
+                            {/* <Link><IoIosNotifications className=' text-white' size={30} /></Link>
+                        <Link to="/userProfile" className=' text-white' size={48}><FaUser /></Link> */}
+
+
+                        </div>
+
 
                     </div>
 

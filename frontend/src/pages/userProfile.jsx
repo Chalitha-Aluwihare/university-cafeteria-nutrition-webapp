@@ -1,11 +1,33 @@
 import React from "react";
 import Footer from "../components/footer";
-import bgImage from "../assets/userProfile/personalized-nurtrition-and-diet.png"; // update with your chosen image
 import { useState } from "react";
+import Bgimage from '../assets/userProfile/BG.png'
+import { IoIosCamera } from "react-icons/io";
+import Profile from '../assets/userProfile/Profile.png'
+import { TbPointFilled } from "react-icons/tb";
+import { IoCartSharp } from "react-icons/io5";
+import { FaMoneyCheck } from "react-icons/fa";
+import { SiCssdesignawards } from "react-icons/si";
+import SuggesionsImg01 from '../assets/suggesions/FoodSuggesions01.png'
+import SuggesionsImg02 from '../assets/suggesions/FoodSuggesions02.png'
+import SuggesionsImg03 from '../assets/suggesions/FoodSuggesions03.png'
+import SuggesionsImg04 from '../assets/suggesions/FoodSuggesions04.png'
+import { FcApproval } from "react-icons/fc";
+import { motion } from "framer-motion";
 
 function UserProfile() {
 
     const [progress, setProgress] = useState(-1);
+    const [activeModel, setActiveModel] = useState(null);
+
+    const breakfastModelOpen = () => {
+        setActiveModel("breakfast");
+    }
+
+
+    const closeModel = () => {
+        setActiveModel(null);
+    }
 
     const nextProgress = () => {
         setProgress(progress + 1)
@@ -30,7 +52,86 @@ function UserProfile() {
     };
     return (
         <>
+            {activeModel === 'breakfast' && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-20 backdrop-brightness-80"
+                >
+                    <div className="relative w-full max-w-md p-6 bg-white rounded-lg ">
+                        <button
+                            className="absolute text-gray-400 top-2 right-2 hover:text-gray-600"
+                            onClick={closeModel}
+                        >
+                            ✕
+                        </button>
+
+                        <h2 className="mb-4 text-2xl font-bold text-center">AI-Powered Food Suggestions</h2>
+                        <p className="text-center">Get personalized meal ideas instantly. Our AI analyzes your taste preferences, dietary needs, and past choices to recommend delicious dishes just for you.</p>
+
+                        <div className="px-5 pt-5 text-center">
+                            <h3 className="font-semibold text-gray-400 text-xl pb-3 pt-3">Kottu Roti </h3>
+                        <hr />
+                        <h3 className="font-semibold text-gray-400 text-xl pb-3 pt-3">Rice and Curry </h3>
+                        <hr />
+                        <h3 className="font-semibold text-gray-400 text-xl pb-3 pt-3">Hoppers </h3>
+                        <hr />
+                        <h3 className="font-semibold text-gray-400 text-xl pb-3 pt-3">String Hoppers  </h3>
+                        <hr />
+                        <h3 className="font-semibold text-gray-400 text-xl pb-3 pt-3">Kiribath </h3>
+                        <hr />
+                        <h3 className="font-semibold text-gray-400 text-xl pb-3 pt-3">Pol Sambol with Lunu Miris </h3>
+                        </div>
+
+
+                    </div>
+                </div>
+            )}
             <div className="pt-20 px-30">
+
+                {/* <div className="relative">
+                    <img src={Bgimage} className="rounded-2xl" alt="" />
+
+                    <div className="absolute z-10 text-white right-2 bottom-2 cursor-pointer ">
+                        <IoIosCamera className="text-3xl z-5" />
+                    </div>
+                </div> */}
+
+                <div className="flex items-center justify-between gap-2 pt-5">
+                    <div className="flex items-center gap-3">
+                        <img src={Profile} className="w-1/15" alt="" />
+                        <div>
+                            <h1 className="font-bold text-2xl">Chalitha Aluwiahre</h1>
+                            <div className="flex gap-1 items-center">
+                                <h2>Male</h2>
+                                <TbPointFilled />
+                                <h2>2002.11.06</h2>
+                            </div>
+                            <h1>chalithaaluwihare@gmail.com</h1>
+
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-10">
+                        <div className="flex flex-col items-center justify-center text-center">
+                            <IoCartSharp className="text-[#4CCF7E]" size={24} />
+                            <h1 className="font-bold text-3xl">005</h1>
+                            <h1 className="font-">Orders</h1>
+                        </div>
+
+                        <div className="flex flex-col items-center justify-center text-center">
+                            <FaMoneyCheck className="text-[#4CCF7E]" size={20} />
+                            <h1 className="font-bold text-3xl">450</h1>
+                            <h1 className="font-">Price</h1>
+                        </div>
+
+                        <div className="flex flex-col items-center justify-center text-center">
+                            <SiCssdesignawards className="text-[#4CCF7E]" size={20} />
+                            <h1 className="font-bold text-3xl">150</h1>
+                            <h1 className="font-">Rewards</h1>
+                        </div>
+
+                    </div>
+                </div>
+                <hr className="mt-5 opacity-50" />
+
 
 
                 {/* Main section with background image */}
@@ -475,6 +576,108 @@ function UserProfile() {
                                     Next
                                 </button>
                             </div>
+                        }
+
+                        {/* food sujjesions */}
+
+                        {progress === 5 &&
+                            <div>
+
+                                <div>
+                                    <h2 className="text-2xl  text-[#AEAEAE]">Whst You Eat</h2>
+                                    <h1 className="text-5xl font-extrabold">Suggesions</h1>
+                                </div>
+
+                                <div className='grid grid-cols-4 gap-5'>
+                                    <div className="relative py-10 overflow-hidden rounded-2xl">
+                                        <motion.img
+                                            whileHover={{ scale: 1.04 }}
+                                            transition={{ duration: 0.2, ease: "easeInOut" }}
+                                            className="w-full h-auto"
+                                            src={SuggesionsImg01}
+                                            alt="Breakfast Meal"
+                                            onClick={breakfastModelOpen}
+                                        />
+
+                                        <div className="absolute bottom-15 inset-x-0">
+                                            <div className="text-center">
+                                                <div className="inline-flex items-center gap-1 justify-center">
+                                                    <FcApproval />
+                                                    <h1 className="text-sm font-semibold text-white">AI Suggested</h1>
+                                                </div>
+                                                <h1 className="text-xl font-bold text-white mt-1">Breakfast Meal</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="relative py-10 overflow-hidden rounded-2xl">
+                                        <motion.img
+                                            whileHover={{ scale: 1.04 }}
+                                            transition={{ duration: 0.2, ease: "easeInOut" }}
+                                            className="w-full h-auto"
+                                            src={SuggesionsImg02}
+                                            alt="Breakfast Meal"
+                                        />
+
+                                        <div className="absolute bottom-15 inset-x-0">
+                                            <div className="text-center">
+                                                <div className="inline-flex items-center gap-1 justify-center">
+                                                    <FcApproval />
+                                                    <h1 className="text-sm font-semibold text-white">AI Suggested</h1>
+                                                </div>
+                                                <h1 className="text-xl font-bold text-white mt-1">Lunch Meal</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="relative py-10 overflow-hidden rounded-2xl">
+                                        <motion.img
+                                            whileHover={{ scale: 1.04 }}
+                                            transition={{ duration: 0.2, ease: "easeInOut" }}
+                                            className="w-full h-auto"
+                                            src={SuggesionsImg03}
+                                            alt="Breakfast Meal"
+                                        />
+
+                                        <div className="absolute bottom-15 inset-x-0">
+                                            <div className="text-center">
+                                                <div className="inline-flex items-center gap-1 justify-center">
+                                                    <FcApproval />
+                                                    <h1 className="text-sm font-semibold text-white">AI Suggested</h1>
+                                                </div>
+                                                <h1 className="text-xl font-bold text-white mt-1">Dinner Meal</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="relative py-10 overflow-hidden rounded-2xl">
+                                        <motion.img
+                                            whileHover={{ scale: 1.04 }}
+                                            transition={{ duration: 0.2, ease: "easeInOut" }}
+                                            className="w-full h-auto"
+                                            src={SuggesionsImg04}
+                                            alt="Breakfast Meal"
+                                        />
+
+                                        <div className="absolute bottom-15 inset-x-0">
+                                            <div className="text-center">
+                                                <div className="inline-flex items-center gap-1 justify-center">
+                                                    <FcApproval />
+                                                    <h1 className="text-sm font-semibold text-white">AI Suggested</h1>
+                                                </div>
+                                                <h1 className="text-xl font-bold text-white mt-1">ShortEats Meal</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+                            </div>
+
                         }
                     </div>
                 </div>
