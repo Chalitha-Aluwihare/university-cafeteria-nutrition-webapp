@@ -4,6 +4,7 @@ import LogoImg from '../assets/navBar/UniEats.png'
 import { TiThMenu } from "react-icons/ti";
 import { IoIosNotifications } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
+import { ChevronLeft } from "lucide-react";
 
 
 function NavBar({ }) {
@@ -223,7 +224,8 @@ function NavBar({ }) {
 
                             <button
                                 type="submit"
-                                className="w-full py-2 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
+                                className="w-full py-3 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
+                                onClick={signinUserDetaislOpen}
                             >
                                 Continue
                             </button>
@@ -270,6 +272,7 @@ function NavBar({ }) {
             {activeModel === "find account" &&
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-20 backdrop-brightness-80">
                     <div className="relative w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
+                        
                         <button
                             className="absolute text-gray-400 top-2 right-2 hover:text-gray-600"
                             onClick={closeModel}
@@ -291,14 +294,14 @@ function NavBar({ }) {
                                 <input
                                     type="text"
                                     id="search"
-                                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-330 "
+                                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200 "
                                     placeholder="Search by email or phone number"
                                 />
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full py-2 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
+                                className="w-full py-3 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
                                 onClick={emailNotFoundOpen}
                             >
                                 Search
@@ -332,14 +335,14 @@ function NavBar({ }) {
                             <input
                                 type="email"
                                 placeholder="Enter Your Email or Phone Number"
-                                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
                             <button
                                 type="submit"
-                                className="w-full px-4 py-2 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
+                                className="w-full py-3 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
                                 onClick={emailFound}
                             >
                                 Search Again
@@ -387,14 +390,15 @@ function NavBar({ }) {
                                         maxLength={1}
                                         value={digit}
                                         onChange={(e) => handleChangeNewCode(e.target.value, index)}
-                                        className="w-12 h-12 text-lg text-center border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                                        className="w-12 h-12 text-lg text-center border border-gray-300 rounded focus:outline-none focus:ring-0 focus:border-[#4CCF7E] transition-colors duration-200"
                                     />
+                                    
                                 ))}
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full py-2 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
+                                className="w-full py-3 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
                                 onClick={loginModelOpen}
                             >
                                 Continue
@@ -461,7 +465,7 @@ function NavBar({ }) {
 
                             <button
                                 type="submit"
-                                className="w-full py-2 text-white bg-green-600 rounded hover:bg-green-700"
+                                className="w-full py-3 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
                                 onClick={signinUserDetaislOpen}
                             >
                                 Continue
@@ -682,7 +686,7 @@ function NavBar({ }) {
                                 type="submit"
                                 disabled={!formData.agreeToTerms}
                                 className={`w-full py-2 text-white rounded ${formData.agreeToTerms
-                                    ? 'bg-green-600 hover:bg-green-700'
+                                    ? 'bg-[#4CCF7E] rounded hover:bg-[#3FC660]'
                                     : 'bg-gray-300 cursor-not-allowed'
                                     }`}
                             >
