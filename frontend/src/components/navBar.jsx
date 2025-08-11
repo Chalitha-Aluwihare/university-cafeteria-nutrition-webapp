@@ -223,7 +223,7 @@ function NavBar({ }) {
 
                             <button
                                 type="submit"
-                                className="w-full py-2 text-white bg-green-600 rounded hover:bg-green-700"
+                                className="w-full py-2 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
                             >
                                 Continue
                             </button>
@@ -279,13 +279,13 @@ function NavBar({ }) {
 
                         <h2 className="mb-4 text-xl font-bold text-center">Find Your Account</h2>
                         <h3 className='font-semibold text-left '>If you forgotten your password,please follow these steps</h3>
-                        <ol className="pt-5 space-y-2 list-decimal list-inside ">
+                        <ol className="pt-5 space-y-1 list-decimal list-inside margin-botto">
                             <li>Find your UniFeast account using your email or phone.</li>
                             <li>Get a 4-digit code sent to your email or phone.</li>
                             <li>Enter the 4-digit code to verify.</li>
                             <li>Create a new password and log in.</li>
                         </ol>
-                        <form className="space-y-4 ">
+                        <form className="mt-6 space-y-9" onSubmit={handleSearch}>
                             <div>
 
                                 <input
@@ -298,7 +298,7 @@ function NavBar({ }) {
 
                             <button
                                 type="submit"
-                                className="w-full py-2 text-white bg-green-700 rounded "
+                                className="w-full py-2 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
                                 onClick={emailNotFoundOpen}
                             >
                                 Search
@@ -339,7 +339,7 @@ function NavBar({ }) {
                             />
                             <button
                                 type="submit"
-                                className="w-full px-4 py-2 text-white bg-green-600 rounded hover:bg-green-700"
+                                className="w-full px-4 py-2 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
                                 onClick={emailFound}
                             >
                                 Search Again
@@ -394,7 +394,7 @@ function NavBar({ }) {
 
                             <button
                                 type="submit"
-                                className="w-full py-2 text-white bg-green-600 rounded hover:bg-green-700"
+                                className="w-full py-2 text-white bg-[#4CCF7E] rounded hover:bg-[#3FC660]"
                                 onClick={loginModelOpen}
                             >
                                 Continue
