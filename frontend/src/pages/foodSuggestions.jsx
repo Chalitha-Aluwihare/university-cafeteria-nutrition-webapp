@@ -8,6 +8,7 @@ import { FcApproval } from "react-icons/fc";
 import { motion } from "framer-motion";
 
 function FoodSuggesions() {
+    
     return (
         <>
             <div className='pt-20 px-30'>
