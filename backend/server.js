@@ -1,23 +1,29 @@
+import dotenv from 'dotenv';
+dotenv.config(); // Load environment variables from .env file
+
 import express from 'express';
 import cors from 'cors';
 import { connectDB } from './config/db.js';
 import shortEatsRoutes from './routes/shortEatsRoutes.js';
+import userRouter from './routes/userRoutes.js';
 
-//app config
+// App config
 const app = express();
 const port = 4000;
 
-//middleware
+// Middleware
 app.use(express.json());
 app.use(cors());
 
-//db connection
+// DB connection
 connectDB();
 
-//api endpoints
-app.use('/api/shortEats',shortEatsRoutes);
-app.use('/shortEats', express.static('uploads/shortEats'));
+// API endpoints
+app.use('/api/shortEats', shortEatsRoutes);
+app.use('/api/user', userRouter);
+app.use('/shortEats', express.static('Uploads/shortEats'));
 
+// Ensure the root route is defined
 app.get('/', (req, res) => {
   res.send('API is running');
 });
